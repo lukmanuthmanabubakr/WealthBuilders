@@ -1,0 +1,54 @@
+
+.p-loader-container {
+  position: fixed; /* Make the loader fixed to the viewport */
+  top: 0;
+  left: 0;
+  width: 100%; /* Cover the entire viewport */
+  height: 100vh; /* Full height of the viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var( --nav-bg); /* Use the dynamic loader background */
+  backdrop-filter: blur(10px); /* Apply the blur effect */
+  z-index: 1000;
+}
+
+/* Loader Wrapper */
+.p-GreenWood-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Loader Text */
+.p-loader-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: var( --nav-logo);
+  margin-bottom: 20px;
+  animation: text-animation 1.5s ease-in-out infinite;
+}
+
+/* Loader Circle */
+.p-loader-circle {
+  width: 50px;
+  height: 50px;
+  border: 5px solid var(--section-3-bg);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Text Animation */
+@keyframes text-animation {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Spin Animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

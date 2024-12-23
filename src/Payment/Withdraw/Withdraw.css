@@ -1,0 +1,126 @@
+.container-withdraw {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: var(--nav-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  gap: 10px;
+  max-width: 600px;
+  /* 
+     */
+}
+
+.container-withdraw .instructions-section,
+.container-withdraw .form-section {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container-withdraw .instructions-section h3,
+.container-withdraw .form-section h2 {
+  color: var(--section-2-header);
+  margin-bottom: 8px;
+}
+
+.container-withdraw .instructions-section p {
+  margin: 5px 0;
+  color: #6b7280;
+}
+
+.container-withdraw .deposit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.container-withdraw .input-field {
+  width: 100%;
+  padding: 10px 20px;
+  color: var(--login-input-text);
+  background: var(--login-input-bg);
+  border-radius: 50px;
+  border-radius: 50px;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  transition: all ease 400ms;
+  -webkit-transition: all ease 400ms;
+  -moz-transition: all ease 400ms;
+  -ms-transition: all ease 400ms;
+  -o-transition: all ease 400ms;
+}
+
+.container-withdraw .submit-button {
+  font-size: 1.1rem;
+  width: 100%;
+  margin-bottom: 5px;
+  color: var(--login-btn-text);
+  background: var(--login-btn-bg);
+  padding: 10px 1.5rem 10px 1.5rem;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+}
+
+.container-withdraw .submit-button:hover {
+  background: var(--login-btn-br-hover);
+  color: var(--login-btn-text-hover);
+}
+
+.container-withdraw .warning-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px;
+  background-color: #fff6f6; /* Soft warning background */
+  border: 1px solid #ffa1a1; /* Border indicating a warning */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 10px;
+}
+
+.container-withdraw .warning-section span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.container-withdraw .warning-section span h3 {
+  margin: 0;
+  color: #d9534f; /* Strong red color for emphasis */
+  font-size: 1.5rem;
+}
+
+.container-withdraw .warning-section span svg {
+  color: #d9534f; /* Matches the warning text color */
+  font-size: 1.8rem; /* Slightly larger for prominence */
+}
+
+.container-withdraw .warning-section p {
+  color: #a94442; /* Subtle red shade for text */
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .container-withdraw {
+    margin-top: 100px; /* Adds more space at the top for larger screens */
+  }
+}

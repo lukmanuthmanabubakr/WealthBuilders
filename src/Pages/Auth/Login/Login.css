@@ -1,0 +1,316 @@
+.loginAspect {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+  background: var(--login-bg);
+  height: 90vh;
+}
+.loginAspect .loginSvg img {
+  height: 500px;
+  width: 500px;
+}
+.loginAspect .loginContainer form {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginAspect .loginContainer {
+  flex: 1;
+  max-width: 400px;
+  padding: 80px 30px 40px 30px;
+  text-align: center;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  background: var(--login-bg-card);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.loginAspect .loginContainer h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--login-bg-h2-color);
+}
+.loginAspect .loginContainer .loginWithGoogle button {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: var(--login-with-google-text);
+  background: var(--login-with-google-bg);
+  padding: 10px 1.5rem 10px 1.5rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: var(--login-Container-shadow) 0px 1px 2px 0px,
+    var(--login-Container-shadow) 0px 2px 6px 2px;
+  cursor: pointer;
+}
+.loginAspect .loginContainer .or {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.loginAspect .loginContainer form .emailInput {
+  width: 100%;
+  padding: 10px 20px;
+  color: var(--login-input-text);
+  background: var(--login-input-bg);
+  border-radius: 50px;
+  margin-bottom: 15px;
+  border-radius: 50px;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  transition: all ease 400ms;
+  -webkit-transition: all ease 400ms;
+  -moz-transition: all ease 400ms;
+  -ms-transition: all ease 400ms;
+  -o-transition: all ease 400ms;
+}
+.loginAspect .loginContainer form .emailInput:focus {
+  border: 1px solid var(--login-input-bg-border);
+}
+
+.loginAspect .loginContainer .submit {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: var(--login-btn-text);
+  background: var(--login-btn-bg);
+  padding: 10px 1.5rem 10px 1.5rem;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+}
+.loginAspect .loginContainer .submit:hover {
+  background: var(--login-btn-br-hover);
+  color: var(--login-btn-text-hover);
+}
+.loginAspect .loginContainer .forgotPassword:hover {
+  color: var(--UserDontHaveAccount-hover);
+}
+.loginAspect .loginContainer .forgotPassword {
+  display: flex;
+  justify-content: start;
+  color: var(--UserDontHaveAccount);
+  font-size: 14px;
+}
+.loginAspect .loginContainer .UserDontHaveAccount {
+  display: flex;
+  justify-content: start;
+  text-align: center;
+  margin-top: 20px;
+}
+.loginAspect .loginContainer .UserDontHaveAccount p {
+  color: var(--UserDontHaveAccount-p);
+}
+.loginAspect .loginContainer .UserDontHaveAccount a {
+  color: var(--UserDontHaveAccount);
+  font-weight: 600;
+  padding-left: 10px;
+}
+.loginAspect .loginContainer .UserDontHaveAccount a:hover {
+  color: var(--UserDontHaveAccount-hover);
+}
+
+@media (max-width: 480px) {
+  .loginAspect {
+    gap: 1rem;
+  }
+
+  .loginAspect .loginSvg img {
+    height: 200px;
+    width: 200px;
+  }
+
+  .loginAspect .loginContainer {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .loginAspect .loginContainer h2 {
+  }
+
+  .loginAspect .loginContainer .submit {
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
+
+/* Ultra-large devices (large desktops, 1440px and up) */
+@media only screen and (max-width: 1440px) {
+}
+
+/* Extra large devices (laptops/desktops, 1024px and up) */
+@media only screen and (max-width: 1200px) {
+  .loginAspect {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+}
+@media only screen and (max-width: 1093px) {
+  .loginAspect {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+  .loginAspect .loginSvg img {
+    height: 400px;
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 923px) {
+  .loginAspect {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    height: 100vh;
+  }
+  .loginAspect .loginSvg img {
+    display: none;
+  }
+  .loginAspect .loginContainer {
+    flex: 1;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background: var(--login-bg-card);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+@media only screen and (max-width: 596px) {
+  .loginAspect {
+    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .loginAspect .loginContainer {
+    flex: 1;
+    margin-left: -5rem;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background: var(--login-bg-card);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+@media only screen and (max-width: 361px) {
+  .loginAspect {
+    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+}
+@media (max-width: 356px) {
+  .loginAspect .loginContainer h2 {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 443px) {
+  .loginAspect {
+    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .loginAspect .loginContainer {
+    flex: 1;
+    max-width: 400px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+  .loginAspect .loginContainer .UserDontHaveAccount p {
+    color: var(--UserDontHaveAccount);
+    font-size: 15px;
+  }
+  .loginAspect .loginContainer .UserDontHaveAccount a {
+    color: var(--UserDontHaveAccount);
+    font-weight: 500;
+    padding-left: 5px;
+  }
+}
+@media only screen and (max-width: 341px) {
+  .loginAspect {
+    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+  .loginAspect .loginContainer {
+    flex: 1;
+    max-width: 400px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background: var(--login-bg-card);
+  }
+  .loginAspect .loginContainer .UserDontHaveAccount p {
+    font-size: 13px;
+  }
+  .loginAspect .loginContainer .UserDontHaveAccount a {
+    font-weight: 500;
+    padding-left: 10px;
+    font-size: 14px;
+    color: var(--UserDontHaveAccount);
+  }
+  .loginAspect .loginContainer .UserDontHaveAccount a:hover {
+    color: var(--UserDontHaveAccount-hover);
+  }
+}

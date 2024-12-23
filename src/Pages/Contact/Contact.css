@@ -1,0 +1,125 @@
+/* General styles */
+.contactPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: var(--login-bg); /* Light green background */
+  font-family: Arial, sans-serif;
+  color: #2f4f4f; /* Dark slate gray for text */
+}
+
+.contactPage h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--login-bg-h2-color); /* Sea green */
+}
+
+/* Contact container layout */
+.contactContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px;
+  background: var(--login-bg-card);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 128, 0, 0.1); /* Green shadow */
+}
+
+.contactImage img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.contactImage img:hover {
+  transform: scale(1.05);
+}
+
+/* Form styling */
+.contactFormContainer {
+  width: 100%;
+  max-width: 500px;
+  margin-left: 2rem;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #4682b4; /* Pale green border */
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: none;
+  color: var(--login-input-text);
+  background-color: var( --login-input-bg); /* Light green background */
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  outline: none;
+  border-color: var(--login-bg-h2-color); /* Lime green focus */
+  background-color: #ffffff;
+}
+
+.contactForm button {
+  padding: 0.8rem;
+  background-color: var(--login-btn-bg); /* Medium sea green */
+  color: var(--login-btn-text);
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contactForm button:hover {
+  background-color: var(--login-btn-br-hover); /* Darker sea green */
+  transform: translateY(-3px);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .contactContainer {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .contactFormContainer {
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
+
+  .contactPage h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactPage h1 {
+    font-size: 1.8rem;
+  }
+
+  .contactForm input,
+  .contactForm textarea {
+    font-size: 0.9rem;
+  }
+
+  .contactForm button {
+    font-size: 1rem;
+  }
+}

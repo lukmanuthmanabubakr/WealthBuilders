@@ -1,0 +1,60 @@
+/* .profileContainer {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .profileIcons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60px;
+    height: 90vh;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+    border-right: 2px solid var(--login-with-google-bg);
+    position: sticky;
+    top: 10vh;
+    z-index: 999;
+  }
+  
+  .profileIconItem {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .pIcon {
+    font-size: 32px;
+    color: var(--primary-color);
+    min-width: 32px;
+  }
+  
+  .iconLabel {
+    margin-left: 10px;
+    opacity: 0;
+    white-space: nowrap;
+    font-size: 18px;
+    color: var(--text-color);
+    transform: translateX(-20px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    -o-transform: translateX(-20px);
+  }
+  
+  .profileIcons:hover {
+    width: 180px;
+  }
+  
+  .profileIconItem:hover .iconLabel {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .logoutIcon {
+    margin-top: auto;
+  }
+   */

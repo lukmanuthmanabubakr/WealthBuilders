@@ -1,0 +1,72 @@
+/* Profile Container */
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Main Content Area */
+.profileContainer .content {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Fixed Bottom Navigation Bar */
+.bottomNavBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  background-color: var(--section-3-bg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.bottomNavBar button {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.bottomNavBar button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.bottomNavBar button .icon {
+  font-size: 20px;
+  color: var(--section-3-header);
+}
+
+.bottomNavBar button.active,
+.bottomNavBar button.active .icon {
+  background: var(--section-3-header);
+  border-radius: 5px;
+  color: var(--section-3-bg);
+}
+
+.bottomNavBar button .label {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 3px;
+}
+
+/* Hide labels on smaller screens */
+@media (max-width: 600px) {
+  .bottomNavBar button .label {
+    display: none;
+  }
+}

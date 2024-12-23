@@ -1,0 +1,24 @@
+.theme-toggle-button {
+  background: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--nav-links);
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle-button:hover {
+  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+}
+@media only screen and (max-width: 320px) {
+  .theme-toggle-button {
+    background: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: transform 0.3s ease;
+  }
+}

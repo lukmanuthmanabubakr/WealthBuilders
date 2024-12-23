@@ -1,0 +1,123 @@
+/* Investment Status Container */
+.investment-status-container {
+  background-color: var(--login-bg);
+  color: #333;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.investment-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--nav-btns-bg);
+  margin-bottom: 1.5rem;
+}
+
+/* No Investment Message */
+.no-investment-message {
+  font-size: 1.2rem;
+  color: var(--login-input-text);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Investment List */
+.investment-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* Investment Card */
+.investment-card {
+  background-color: var(--login-bg-card);
+  border: 1px solid var(--login-input-bg-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.investment-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Card Header */
+.investment-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.icon-plan {
+  color: var(--nav-btns-bg);
+  font-size: 1.5rem;
+}
+
+.plan-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--nav-btns-bg);
+}
+
+/* Card Body */
+.investment-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.investment-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Icons */
+.icon-amount {
+  color: var(--nav-btns-bg);
+  font-size: 1.3rem;
+}
+
+.icon-status {
+  font-size: 1.3rem;
+}
+
+.icon-status.active {
+  color: var(--nav-btns-bg);
+}
+
+.icon-status.inactive {
+  color: #d32f2f;
+}
+
+/* Investment Details */
+.investment-amount {
+  font-size: 1rem;
+  color: #333;
+}
+
+.investment-status-text {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.investment-status-text.active {
+  color: var(--nav-btns-bg);
+}
+
+.investment-status-text.inactive {
+  color: #d32f2f;
+}
+
+@media (max-width: 600px) {
+  .investment-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

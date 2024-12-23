@@ -1,0 +1,78 @@
+.workflow {
+    padding: 50px 20px;
+    background-color: var(--section-5-bg, #F0F7F4);
+    text-align: center;
+}
+
+.workflow-title {
+    font-size: 2.5rem;
+    color: var(--login-bg-h2-color);
+    margin-bottom: 15px;
+}
+
+.workflow-subtitle {
+    font-size: 1.1rem;
+    color: var(--workflow-title-color);
+    margin-bottom: 40px;
+}
+
+.workflow-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.workflow-step {
+    background-color: var(--workflow-card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    color: var(--login-bg-card);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.workflow-step:hover {
+    transform: translateY(-5px);
+}
+
+.workflow-icon-bg {
+    background-color: var(--workflow-icon-bg);
+    border-radius: 50%;
+    padding: 15px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.workflow-icon {
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+.workflow-step h3 {
+    font-size: 1.2rem;
+    color: var(--workflow-title-color);
+    margin-bottom: 10px;
+}
+
+.workflow-step p {
+    font-size: 0.95rem;
+    color: var(--workflow-text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .workflow-title {
+        font-size: 2rem;
+    }
+
+    .workflow-step {
+        padding: 20px;
+    }
+
+    .workflow-icon {
+        font-size: 2rem;
+    }
+}

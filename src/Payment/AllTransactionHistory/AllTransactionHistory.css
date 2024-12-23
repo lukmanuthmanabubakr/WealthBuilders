@@ -1,0 +1,169 @@
+/* General container styles */
+.history-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--login-bg-h2-color); /* Green family for titles */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Card styles */
+.history-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.history-card {
+  border: 1px solid var(--login-input-bg-border); /* Light border for the card */
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.history-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.history-item-type {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2d3748; /* Dark gray for text */
+}
+
+/* Status styles */
+.status {
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.status-icon {
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+.status-icon.confirmed {
+  color: #38a169; /* Green for confirmed status */
+}
+
+.status-icon.cancelled {
+  color: #e53e3e; /* Red for cancelled status */
+}
+
+/* Card body styles */
+.card-body p {
+  font-size: 14px;
+  margin: 8px 0;
+  color: #4a5568; /* Medium gray for card text */
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+}
+
+.modal-content h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--login-bg-h2-color); /* Green family */
+  margin-bottom: 15px;
+}
+
+.modal-content p {
+  font-size: 14px;
+  margin: 10px 0;
+  color: #4a5568;
+}
+
+.close-modal {
+  background-color: #e53e3e; /* Red for the close button */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.close-modal:hover {
+  background-color: #c53030;
+}
+
+.error_transaction {
+  font-size: 16px;
+  color: #e53e3e;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.loading_transaction {
+  font-size: 16px;
+  color: var(--login-btn-bg);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.no-data {
+  font-size: 16px;
+  color: #4a5568;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+  .history-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .history-cards {
+    grid-template-columns: 1fr; /* Single column on small screens */
+  }
+
+  .modal-content {
+    width: 95%;
+  }
+}

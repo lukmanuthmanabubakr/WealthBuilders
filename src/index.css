@@ -1,0 +1,115 @@
+/* src/index.css */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  border: none;
+}
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling for the entire page */
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+}
+:root {
+  
+  --nav-bg: rgb(240, 240, 240); /* Light Gray */
+  --nav-links: rgb(70, 130, 180); /* Steel Blue */
+  --nav-logo: rgb(0, 0, 128); /* Navy */
+  --nav-btns-bg: rgb(70, 130, 180); /* Steel Blue */
+  --nav-btns-text: rgb(255, 255, 255);
+  --nav-btns-bg-hover: rgb(100, 149, 237); /* Cornflower Blue */
+
+  --login-bg: rgb(240, 240, 255); /* Light Blue */
+  --login-bg-card: rgb(255, 255, 255); /* White */
+  --login-bg-h2-color: rgb(70, 130, 180); /* Steel Blue */
+
+  --login-input-text: rgb(50, 50, 50); /* Dark Gray */
+  --login-input-bg-border: rgb(173, 216, 230); /* Light Blue */
+  --login-input-bg: #ffffff; /* White */
+
+  --login-btn-bg: rgb(70, 130, 180); /* Steel Blue */
+  --login-btn-text: #ffffff;
+  --login-btn-br-hover: rgb(100, 149, 237); /* Cornflower Blue */
+  --login-btn-text-hover: #fff;
+  --UserDontHaveAccount-p: rgb(100, 100, 100); /* Gray */
+  --UserDontHaveAccount: rgb(70, 130, 180); /* Steel Blue */
+  --UserDontHaveAccount-hover: rgb(100, 149, 237); /* Cornflower Blue */
+
+  --hero-text-one: #fff;
+  --hero-text-one-span: #1e90ff; /* Dodger Blue */
+  --hero-text-two: #e0e0e0; /* Light Gray */
+
+  /* Section 2 */
+  --section-2-bg: #f0f7f4; /* Light Gray */
+  --section-2-header: #2f4f4f; /* Dark Gray */
+  --section-2-card: #e8f5e9; /* Very Light Gray */
+
+  /* Section 3 */
+  --section-3-bg: #4682b4; /* Steel Blue */
+  --section-3-header: #ffffff; /* White */
+  --section-3-p: #f0f7f4; /* Light Gray */
+  --section-3-btn: #f0f7f4; /* Light Gray */
+  --section-3-btn-hover: #4682b4; /* Steel Blue */
+  --section-3-btn-text: #4682b4; /* Steel Blue */
+  --section-3-btn-text-hover: #f0f7f4; /* Light Gray */
+  --card-image-bg: #fff; /* White */
+  --card-image-text: #333; /* Dark Gray */
+
+  /* Section 4 */
+  --section-4-bg: #f0f7f4; /* Light Gray */
+  --section-4-header: #2f4f4f; /* Dark Gray */
+  --section-4-card: #e8f5e9; /* Very Light Gray */
+  --section-4-card-icon: #1e90ff; /* Dodger Blue */
+  
+  /* Section 5 */
+  --section-5-bg: #f0f7f4; /* Light Gray */
+  --section-5-header: #f0f7f4; /* Light Gray */
+  --section-5-card: #e8f5e9; /* Very Light Gray */
+  --section-5-card-icon: #1e90ff; /* Dodger Blue */
+
+  /* Plans */
+  --plans-text: #333333; /* Dark Gray */
+  --plan-bg: #f0f7f4; /* Light Gray */
+  --plan-title: #125699; /* Dark Navy Blue */
+  --plan-price: #4682b4; /* Steel Blue */
+  --plan-desc: #6c757d; /* Gray */
+  --plan-button: #4682b4; /* Steel Blue */
+
+  /* Workflow */
+  --workflow-card-bg: #e8f5e9; /* Very Light Gray */
+  --workflow-icon-bg: #1e90ff; /* Dodger Blue */
+  --workflow-title-color: #2f4f4f; /* Dark Gray */
+  --workflow-text-color: #333; /* Dark Gray */
+
+  /* Contact Us */
+  --Contact-us-bg: #f0f7f4; /* Light Gray */
+  --big-circle-contact: #f0f7f4; /* Light Gray */
+
+  --blue-primary: #4682b4; /* Steel Blue */
+  --blue-dark: #1e90ff; /* Dodger Blue */
+  --blue-light: #add8e6; /* Light Blue */
+  --text-dark: #333333; /* Dark Gray */
+  --text-light: #ffffff; /* White */
+
+  /* Dashboard */
+  --dashboard-h2: #87ea88; /* Light Green */
+  --dashboard-name: #4682b4; /* Steel Blue */
+  --dashboard-name-hover: #5a9bd4; /* Lighter Steel Blue */
+}
+
+
+[data-theme="dark"] {
+}

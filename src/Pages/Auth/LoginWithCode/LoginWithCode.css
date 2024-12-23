@@ -1,0 +1,326 @@
+.lWithCodePassAspect {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: var(--login-bg);
+  height: 90vh;
+  gap: 10rem;
+}
+.lWithCodePassAspect .loginSvg img {
+  height: 500px;
+  width: 500px;
+}
+.lWithCodePassAspect .loginContainer form {
+  display: flex;
+  flex-direction: column;
+}
+
+.lWithCodePassAspect .loginContainer {
+  flex: 1;
+  max-width: 400px;
+  padding: 80px 30px 40px 30px;
+  text-align: center;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  background: var(--login-bg-card);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.lWithCodePassAspect .loginContainer h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--login-bg-h2-color);
+}
+.lWithCodePassAspect .loginContainer form .emailInput {
+  width: 100%;
+  padding: 10px 20px;
+  color: var(--login-input-text);
+  background: var(--login-input-bg);
+  border-radius: 50px;
+  margin-bottom: 15px;
+  border-radius: 50px;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  transition: all ease 400ms;
+  -webkit-transition: all ease 400ms;
+  -moz-transition: all ease 400ms;
+  -ms-transition: all ease 400ms;
+  -o-transition: all ease 400ms;
+}
+.lWithCodePassAspect .loginContainer form .emailInput:focus {
+  border: 1px solid var(--login-input-bg-border);
+}
+
+.lWithCodePassAspect .loginContainer .cEmail {
+    font-size: 12px;
+    transition: all 400ms ease;
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+}
+.lWithCodePassAspect .loginContainer .submit {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: var(--login-btn-text);
+  background: var(--login-btn-bg);
+  padding: 10px 1.5rem 10px 1.5rem;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+}
+.lWithCodePassAspect .loginContainer .submit:hover {
+  background: var(--login-btn-br-hover);
+  color: var(--login-btn-text-hover);
+}
+.lWithCodePassAspect .loginContainer .forgotPassword {
+  display: flex;
+  justify-content: start;
+  color: var(--UserDontHaveAccount);
+  font-size: 14px;
+}
+.lWithCodePassAspect .loginContainer .UserDontHaveAccount {
+  display: flex;
+  justify-content: start;
+  text-align: center;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: center;
+}
+.lWithCodePassAspect .loginContainer .UserDontHaveAccount p {
+  color: var(--UserDontHaveAccount-p);
+}
+.lWithCodePassAspect .loginContainer .UserDontHaveAccount b {
+  color: var(--UserDontHaveAccount);
+  font-weight: 600;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1322px) {
+  .lWithCodePassAspect {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    gap: 10rem;
+  }
+}
+@media only screen and (max-width: 1188px) {
+  .lWithCodePassAspect {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    gap: 5rem;
+  }
+  .lWithCodePassAspect .loginContainer {
+    flex: 1;
+    max-width: 400px;
+    padding: 40px 15px 30px 15px;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+}
+@media only screen and (max-width: 1011px) {
+  .lWithCodePassAspect {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    gap: 5rem;
+  }
+  .lWithCodePassAspect .loginSvg img {
+    height: 400px;
+    width: 400px;
+  }
+  .lWithCodePassAspect .loginContainer {
+    flex: 1;
+    max-width: 400px;
+    padding: 40px 15px 30px 15px;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+}
+@media only screen and (max-width: 923px) {
+  .lWithCodePassAspect {
+    display: grid;
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .lWithCodePassAspect .loginSvg img {
+    height: 400px;
+    width: 400px;
+    display: none;
+  }
+  .lWithCodePassAspect .loginContainer {
+    flex: 1;
+    max-width: 400px;
+    padding: 40px 30px 30px 30px;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+}
+@media only screen and (max-width: 657px) {
+  .lWithCodePassAspect {
+    margin-left: -3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .lWithCodePassAspect .loginSvg img {
+    height: 400px;
+    width: 400px;
+    display: none;
+  }
+  .lWithCodePassAspect .loginContainer {
+    flex: 1;
+    max-width: 400px;
+    padding: 40px 30px 30px 30px;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .lWithCodePassAspect {
+    display: grid;
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: -6rem;
+  }}
+@media only screen and (max-width: 422px) {
+  .lWithCodePassAspect {
+    margin-left: -5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .lWithCodePassAspect .loginSvg img {
+    height: 400px;
+    width: 400px;
+    display: none;
+  }
+  .lWithCodePassAspect .loginContainer {
+    flex: 1;
+    max-width: 400px;
+    padding: 20px 15px 15px 20px;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+  .lWithCodePassAspect .loginContainer h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 395px) {
+  .lWithCodePassAspect {
+    margin-left: -5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .lWithCodePassAspect .loginSvg img {
+    height: 400px;
+    width: 400px;
+    display: none;
+  }
+  .lWithCodePassAspect .loginContainer {
+    flex: 1;
+    max-width: 400px;
+    padding: 20px 15px 15px 20px;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+  .lWithCodePassAspect .loginContainer h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .lWithCodePassAspect .loginContainer .UserDontHaveAccount p {
+    font-size: 14px;
+  }
+  .lWithCodePassAspect .loginContainer .UserDontHaveAccount b {
+    font-weight: 500;
+    padding-left: 10px;
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 358px) {
+  .lWithCodePassAspect .loginContainer .UserDontHaveAccount p {
+    color: var(--text-color);
+    font-size: 12px;
+  }
+  .lWithCodePassAspect .loginContainer .UserDontHaveAccount b {
+    color: var(--user-dont-account);
+    font-weight: 500;
+    padding-left: 5px;
+    font-size: 14px;
+  }
+}

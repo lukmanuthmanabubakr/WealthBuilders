@@ -1,0 +1,71 @@
+.get-all-pending-deposits {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: var(--login-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.get-all-pending-deposits h2 {
+  color: var(--dashboard-name);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.deposit-item-link {
+  text-decoration: none;
+}
+
+.deposit-item {
+  background-color: var(--login-bg-card);
+  border: 1px solid var(--login-input-bg-border);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--text-dark);
+}
+
+.deposit-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.deposit-item p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.deposit-item p strong {
+  color: var(--dashboard-name-hover);
+}
+
+.deposit-item:hover strong {
+  color: var(--dashboard-name-hover);
+}
+
+.deposit-item p:last-child {
+  margin-top: 0.8rem;
+}
+
+.deposit-item p strong {
+  font-weight: 600;
+}
+
+.get-all-pending-deposits p {
+  color: var(--text-dark);
+  text-align: center;
+  font-size: 1rem;
+}
+
+.get-all-pending-deposits p.loading {
+  font-style: italic;
+  color: var(--green-dark);
+}
+
+.get-all-pending-deposits p.no-results {
+  font-size: 1.2rem;
+  color: var(--green-primary);
+}

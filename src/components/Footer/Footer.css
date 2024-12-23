@@ -1,0 +1,151 @@
+/* Updated styling for the footer with a green theme */
+.footer {
+    background-color: #125699; /* Dark green for the footer background */
+    color: #e9f5ee; /* Light greenish-white for text */
+    padding: 40px 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Footer sections padding */
+.footer-section {
+    padding: 10px;
+}
+
+/* Footer header styling */
+.footer h2 {
+    font-size: 1.5rem;
+    color: #c1e1c1; /* Softer green for headers */
+    margin-bottom: 10px;
+}
+
+/* Footer paragraph and list styling */
+.footer p,
+.footer ul {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #d4ede2; /* Muted greenish color for readability */
+}
+
+/* List styling */
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin: 8px 0;
+}
+
+/* Footer links styling */
+.footer ul li a {
+    color: var(--login-input-bg-border); /* Light green for links */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer ul li a:hover {
+    color: var(--UserDontHaveAccount-hover); /* Slightly lighter on hover for emphasis */
+}
+
+/* Social icons styling */
+.social-icons a {
+    color: var(--login-input-bg-border); /* Matching green for social icons */
+    margin-right: 15px;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--UserDontHaveAccount-hover); /* Softer light green on hover */
+}
+
+/* Footer bottom styling */
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var( --login-input-bg-border); /* Darker green border for separation */
+    font-size: 0.9rem;
+    color: #d4ede2;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns instead of 3 */
+    }
+
+    .footer h2 {
+        font-size: 1.3rem;
+    }
+
+    .footer p,
+    .footer ul {
+        font-size: 0.95rem;
+    }
+
+    .social-icons a {
+        font-size: 1.3rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem;
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr; /* Single column layout for mobile */
+    }
+
+    .footer h2 {
+        font-size: 1.2rem;
+    }
+
+    .footer p,
+    .footer ul {
+        font-size: 0.9rem;
+    }
+
+    .social-icons a {
+        font-size: 1.2rem;
+        margin-right: 10px;
+    }
+
+    .footer-bottom {
+        font-size: 0.7rem;
+    }
+}
+
+/* For very small screens (e.g., smaller phones) */
+@media (max-width: 480px) {
+    .footer-content {
+        padding: 10px;
+    }
+
+    .footer h2 {
+        font-size: 1.1rem;
+    }
+
+    .footer p,
+    .footer ul {
+        font-size: 0.85rem;
+    }
+
+    .social-icons a {
+        font-size: 1.1rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.6rem;
+    }
+}

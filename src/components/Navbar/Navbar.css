@@ -1,0 +1,333 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: var(--nav-bg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+.navbar .navCon {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+.navbar-brand .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--nav-logo);
+}
+.navbar .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.navbar .nav-links a {
+  color: var(--nav-links);
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+.navbar .nav-links a:hover {
+  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+}
+.navbar .nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+}
+/* Navbar.css */
+
+.navbar .nav-actions .icon {
+  display: none;
+}
+.navbar .nav-actions .loginButton {
+  background-color: var(--nav-btns-bg);
+  color: var(--nav-btns-text);
+  padding: 10px 30px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+.navbar .nav-actions .loginButton:hover {
+  background-color: var(--nav-btns-bg-hover);
+}
+
+.navbar .nav-actions .loginButton:active {
+  background-color: var(--login-button-bg-hover);
+  /*DarkPurple*/transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+}
+
+.navbar .nav-actions .loginButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--login-button-bg); /* Focus shadow in Dark Purple */
+}
+
+
+
+
+.navbar .profileText {
+  display: none;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+    -webkit-transform: translateX(-5px);
+    -moz-transform: translateX(-5px);
+    -ms-transform: translateX(-5px);
+    -o-transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
+
+.navbar .nav-actions .notificationBell:hover {
+  animation: shake 0.5s ease-in-out 1;
+  animation-iteration-count: 1;
+}
+
+/* Media Quary start */
+
+/* Ultra-large devices (large desktops, 1440px and up) */
+@media only screen and (max-width: 1440px) {
+}
+
+/* Extra large devices (laptops/desktops, 1024px and up) */
+@media only screen and (max-width: 1200px) {
+}
+@media only screen and (max-width: 1128px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .navbar .navCon {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  .navbar .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+}
+@media only screen and (max-width: 1064px) {
+  .navbar .nav-links {
+    display: none;
+  }
+
+  .navbar .nav-links.show {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: absolute;
+    top: 60px; /* Adjust based on your navbar height */
+    right: 10px;
+    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
+    box-shadow: var(--navbar-box-shadow) 0px 10px 10px -10px;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+
+  .navbar .nav-actions .icon {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--nav-links);
+  }
+
+  .navbar .profileText {
+    display: inline-block;
+    color: var(--text-color);
+    text-decoration: none;
+    margin-right: 1rem;
+  }
+  .navbar .profileImg {
+    display: none;
+  }
+  .dropdown-menu .linksDivs {
+    display: grid;
+    gap: 2rem;
+  }
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--nav-bg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    width: 20rem;
+    /* height: 20rem; */
+    overflow-y: auto;
+    border-bottom-left-radius: 10px;
+    transform: translateY(-100%);
+    animation: swipeIn 0.5s forwards;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+}
+
+  @keyframes swipeIn {
+    from {
+      transform: translateY(-100%);
+      -webkit-transform: translateY(-100%);
+      -moz-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+      -o-transform: translateY(-100%);
+}
+    to {
+      transform: translateY(0);
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+}
+  }
+
+  .dropdown-menu a {
+    color: var(--nav-links);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .dropdown-menu .buttonDivs button {
+    color: var(--nav-links);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: none;
+  }
+
+  .dropdownMenu a:hover {
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+  }
+  .navbar .nav-actions .loginButton {
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 382px) {
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    width: 15rem;
+    overflow-y: auto;
+    border-bottom-left-radius: 10px;
+    transform: translateY(-100%);
+    animation: swipeIn 0.5s forwards;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+}
+}
+@media only screen and (max-width: 298px) {
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    width: 12rem;
+    overflow-y: auto;
+    border-bottom-left-radius: 10px;
+    transform: translateY(-100%);
+    animation: swipeIn 0.5s forwards;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+}
+}
+
+/* Large devices (tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+}
+
+/* Medium devices (phones, 481px and up) */
+@media only screen and (max-width: 512px) {
+  .navbar {
+    padding: 0.5rem;
+  }
+
+}
+
+/* Medium devices (phones, 481px and up) */
+@media only screen and (max-width: 480px) {
+}
+
+/* Small devices (phones, 320px and up) */
+@media only screen and (max-width: 320px) {
+  .navbar-brand .logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .navbar .nav-actions .loginButton {
+    background-color: var(--login-button-bg); /* Dark Purple */
+    color: var(--login-button-text); /* White text */
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}

@@ -1,0 +1,192 @@
+/* General Styles */
+.start-investment-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--login-bg);
+}
+
+.start-investment-card {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: var(--login-bg-card);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.start-investment-title {
+  text-align: center;
+  color: var(--login-bg-h2-color);
+  margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #34495e;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 20px;
+  color: var(--login-input-text);
+  background: var(--login-input-bg);
+  border-radius: 50px;
+  margin-bottom: 15px;
+  border-radius: 50px;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  transition: all ease 400ms;
+  -webkit-transition: all ease 400ms;
+  -moz-transition: all ease 400ms;
+  -ms-transition: all ease 400ms;
+  -o-transition: all ease 400ms;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+}
+.selected-plan{
+  background-color: var(--nav-bg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  margin-bottom: 10px;
+  list-style: none;
+  padding: 10px;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  width: 100%;
+  padding: 10px 20px;
+  color: var(--login-input-text);
+  background: var(--login-input-bg);
+  border-radius: 50px;
+  margin-bottom: 2px;
+  border-radius: 50px;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  transition: all ease 400ms;
+  -webkit-transition: all ease 400ms;
+  -moz-transition: all ease 400ms;
+  -ms-transition: all ease 400ms;
+  -o-transition: all ease 400ms;
+}
+/* .dropdown-toggle:hover {
+  background-color: #27ae60;
+} */
+
+.dropdown-list {
+  list-style: none;
+  margin: 2px 0 0 0;
+  padding: 0;
+  border: 1px solid #dcdcdc;
+  background-color: #eafaf1;
+  border-radius: 5px;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+.dropdown-item {
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  color: #34495e;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover {
+  background-color: var(--nav-btns-bg);
+  color: #ffffff;
+}
+
+.dropdown-details {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.maturity {
+  font-weight: bold;
+  color: var(--nav-btns-bg);
+}
+
+/* Change Plan Button */
+.change-plan-button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.change-plan-button:hover {
+  background-color: #c0392b;
+}
+
+/* Submit Button */
+.start-investment-container .submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--login-btn-bg);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 2rem;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+}
+
+.start-investment-container .submit-button:hover {
+  background-color: var(--login-btn-br-hover);
+}
+
+.invest-success-message {
+  color: #27ae60;
+  font-size: 1rem;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.email-notification{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 5px;
+}

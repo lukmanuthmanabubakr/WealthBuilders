@@ -1,0 +1,96 @@
+.edit-wallet-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--nav-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    gap: 20px;
+    max-width: 600px;
+  }
+  
+  .edit-wallet-container h2 {
+    color: var(--dashboard-name);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+  
+  .edit-wallet-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .edit-wallet-container label {
+    font-size: 1rem;
+    color: var(--plans-text);
+    font-weight: 500;
+  }
+  
+  .edit-wallet-container input[type="number"],
+  .edit-wallet-container select {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--login-input-bg);
+    color: var(--login-input-text);
+    border: 1px solid var(--login-input-bg-border);
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 400ms ease;
+  }
+  
+  .edit-wallet-container input[type="number"]:focus,
+  .edit-wallet-container select:focus {
+    outline: none;
+    border-color: var(--green-dark);
+    box-shadow: 0 0 8px var(--green-primary);
+  }
+  
+  .edit-wallet-container button[type="submit"] {
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 10px 1.5rem;
+    color: var(--login-btn-text);
+    background-color: var(--login-btn-bg);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 400ms ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .edit-wallet-container button[type="submit"]:hover {
+    background-color: var(--login-btn-br-hover);
+    color: var(--login-btn-text-hover);
+  }
+  
+  .edit-wallet-container p.error {
+    color: #d9534f;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .edit-wallet-container p.success {
+    color: var(--green-dark);
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .edit-wallet-container button.back-button {
+    font-size: 1rem;
+    color: var(--login-btn-text);
+    background-color: var(--green-primary);
+    border: none;
+    padding: 10px 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 400ms ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .edit-wallet-container button.back-button:hover {
+    background-color: var(--green-dark);
+  }
+  

@@ -1,0 +1,75 @@
+.paymentLinksContainer {
+  background: var(--section-2-card);
+  padding: 20px;
+  border-radius: 25px;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.paymentLinksContainer a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--blue-light), var(--blue-dark));
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.08) 0px 2px 4px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: #2e7d32; /* Deep green for text */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.paymentLinksContainer a:hover {
+  transform: translateY(-3px);
+}
+
+.paymentLinksContainer .iconPay {
+  font-size: 1.8rem;
+  color: var(--nav-logo); /* Medium green for icons */
+  margin-bottom: 0.4rem;
+}
+
+.paymentLinksContainer .depoPay {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--nav-logo); /* Consistent green shade for text */
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .paymentLinksContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .paymentLinksContainer a {
+    padding: 0.75rem;
+  }
+
+  .paymentLinksContainer .iconPay {
+    font-size: 1.5rem;
+  }
+
+  .paymentLinksContainer .depoPay {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 784px) {
+  .paymentLinksContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .paymentLinksContainer a {
+    padding: 0.75rem;
+  }
+
+  .paymentLinksContainer .iconPay {
+    font-size: 1.5rem;
+  }
+
+  .paymentLinksContainer .depoPay {
+    font-size: 0.9rem;
+  }
+}

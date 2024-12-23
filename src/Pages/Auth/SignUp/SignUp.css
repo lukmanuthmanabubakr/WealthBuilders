@@ -1,0 +1,419 @@
+.registerAspect {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: var(--login-bg);
+  gap: 10rem;
+  height: 100vh;
+}
+.registerAspect .loginSvg img {
+  height: 500px;
+  width: 500px;
+}
+.registerAspect .loginContainer form {
+  display: flex;
+  flex-direction: column;
+}
+
+.registerAspect .loginContainer {
+  flex: 1;
+  max-width: 400px;
+  padding: 10px 30px 10px 30px;
+  text-align: center;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  background: var(--login-bg-card);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.registerAspect .loginContainer h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--login-bg-h2-color);
+}
+.registerAspect .loginContainer .loginWithGoogle button {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: var(--login-with-google-text);
+  background: var(--login-with-google-bg);
+  padding: 10px 1.5rem 10px 1.5rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: var(--login-Container-shadow) 0px 1px 2px 0px,
+    var(--login-Container-shadow) 0px 2px 6px 2px;
+  cursor: pointer;
+}
+.registerAspect .loginContainer .or {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.registerAspect .loginContainer form .emailInput {
+  width: 100%;
+  padding: 10px 20px;
+  color: var(--login-input-text);
+  background: var(--login-input-bg);
+  border-radius: 50px;
+  margin-bottom: 15px;
+  border-radius: 50px;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  transition: all ease 400ms;
+  -webkit-transition: all ease 400ms;
+  -moz-transition: all ease 400ms;
+  -ms-transition: all ease 400ms;
+  -o-transition: all ease 400ms;
+}
+.registerAspect .loginContainer form input:focus {
+  border: 1px solid var(--login-input-bg-border);
+}
+.registerAspect .loginContainer form .referInput {
+  width: 100%;
+  padding: 10px 20px;
+  color: var(--login-input-text);
+  background: var(--login-input-bg);
+  border-radius: 50px;
+  margin-bottom: 5px;
+  border-radius: 50px;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  transition: all ease 400ms;
+  -webkit-transition: all ease 400ms;
+  -moz-transition: all ease 400ms;
+  -ms-transition: all ease 400ms;
+  -o-transition: all ease 400ms;
+}
+.registerAspect .loginContainer form input:focus {
+  border: 1px solid var(--login-input-bg-border);
+}
+
+.registerAspect .loginContainer form .nameInput {
+  width: 100%;
+  padding: 10px 20px;
+  color: var(--login-input-text);
+  background: var(--login-input-bg);
+  border-radius: 50px;
+  margin-bottom: 15px;
+  border-radius: 50px;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  transition: all ease 400ms;
+  -webkit-transition: all ease 400ms;
+  -moz-transition: all ease 400ms;
+  -ms-transition: all ease 400ms;
+  -o-transition: all ease 400ms;
+}
+.registerAspect .loginContainer form .nameInput:focus {
+  border: 1px solid var(--login-input-bg-border);
+}
+
+.registerAspect .loginContainer .passwordStrength {
+  background-color: var(--nav-bg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  margin-top: 5px;
+  margin-bottom: 10px;
+  list-style: none;
+  padding: 10px;
+}
+.registerAspect .loginContainer .passwordStrength li {
+  list-style: none;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: var(--login-input-text);
+}
+.registerAspect .loginContainer .submit {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: var(--login-btn-text);
+  background: var(--login-btn-bg);
+  padding: 10px 1.5rem 10px 1.5rem;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+}
+.registerAspect .loginContainer .submit:hover {
+  background: var(--login-btn-br-hover);
+  color: var(--login-btn-text-hover);
+}
+.registerAspect .loginContainer .forgotPassword {
+  display: flex;
+  justify-content: start;
+  color: var(--text-color);
+  font-size: 14px;
+}
+.registerAspect .loginContainer .UserDontHaveAccount {
+  display: flex;
+  justify-content: start;
+  text-align: center;
+  margin-top: 10px;
+}
+.registerAspect .loginContainer .UserDontHaveAccount p {
+  color: var(--UserDontHaveAccount-p);
+}
+.registerAspect .loginContainer .UserDontHaveAccount a {
+  color: var(--UserDontHaveAccount);
+  font-weight: 600;
+  padding-left: 10px;
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+}
+.registerAspect .loginContainer .UserDontHaveAccount a:hover {
+  color: var(--UserDontHaveAccount-hover);
+}
+
+@media only screen and (max-width: 1291px) {
+  .registerAspect {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+  .registerAspect .loginContainer {
+    flex: 1;
+    max-width: 400px;
+    padding: 8px 30px 8px 30px;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background: var(--login-bg-card);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .registerAspect {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+  .registerAspect .loginContainer {
+    flex: 1;
+    max-width: 400px;
+    padding: 10px 30px 10px 30px;
+    background: var(--login-bg-card);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+}
+@media only screen and (max-width: 1006px) {
+  .registerAspect {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+  .registerAspect .loginContainer {
+    flex: 1;
+    max-width: 400px;
+    padding: 10px 30px 10px 30px;
+    background: var(--login-bg-card);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+  .registerAspect .loginSvg img {
+    height: 400px;
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 923px) {
+  .registerAspect {
+    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+  .registerAspect .loginSvg img {
+    height: 400px;
+    width: 400px;
+    display: none;
+  }
+  .registerAspect .loginContainer {
+    margin-left: -5rem;
+    flex: 1;
+    max-width: 400px;
+    padding: 10px 30px 10px 30px;
+    background: var(--login-bg-card);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+}
+
+@media only screen and (max-width: 518px) {
+  .registerAspect {
+    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    height: 100vh;
+  }
+}
+@media only screen and (max-width: 436px) {
+  .registerAspect {
+    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    height: 100vh;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .registerAspect .loginSvg img {
+    height: 400px;
+    width: 400px;
+    display: none;
+  }
+  .registerAspect .loginContainer {
+    flex: 1;
+    max-width: 400px;
+    padding: 10px 30px 10px 30px;
+    background: var(--login-bg-card);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+}
+
+@media only screen and (max-width: 383px) {
+  .registerAspect .loginContainer .passwordStrength li {
+    list-style: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 15px;
+  }
+  .registerAspect .loginContainer .UserDontHaveAccount p {
+    color: var(--UserDontHaveAccount-p);
+    font-size: 15px;
+  }
+  .registerAspect .loginContainer .UserDontHaveAccount a {
+    color: var(--UserDontHaveAccount);
+    font-weight: 600;
+    padding-left: 10px;
+  }
+  .registerAspect .loginContainer .UserDontHaveAccount a:hover {
+    color: var(--UserDontHaveAccount-hover);
+    font-weight: 600;
+    padding-left: 10px;
+  }
+}
+@media only screen and (max-width: 367px) {
+  .registerAspect .loginContainer .passwordStrength li {
+    list-style: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 362px) {
+  .registerAspect .loginContainer .UserDontHaveAccount p {
+    font-size: 13px;
+  }
+  .registerAspect .loginContainer .UserDontHaveAccount a {
+    font-weight: 500;
+    padding-left: 5px;
+    font-size: 14px;
+  }
+  .registerAspect {
+    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+  .registerAspect .loginContainer {
+    flex: 1;
+    max-width: 400px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .registerAspect {
+    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 130vh;
+  }
+}

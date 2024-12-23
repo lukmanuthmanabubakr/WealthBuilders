@@ -1,0 +1,148 @@
+.mainDashBoard {
+  background: var(--section-2-card);
+  padding: 20px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+.mainDashBoard .mainDashBoardContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mainDashBoard .mainDashBoardContainer .welName {
+  display: flex;
+  flex-direction: column;
+}
+.mainDashBoard .mainDashBoardContainer .welName h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--dashboard-name);
+  letter-spacing: 1px;
+}
+.mainDashBoard .mainDashBoardContainer .welName .maxScreen{
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--dashboard-name);
+}
+.mainDashBoard .mainDashBoardContainer .welName .smallScreen{
+  display: none;
+}
+.mainDashBoard .mainDashBoardContainer .balance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.mainDashBoard .mainDashBoardContainer .balance .depoSpan {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  background-color: var(--section-3-header);
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.mainDashBoard .mainDashBoardContainer .balance .depoSpan .dBal {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #999999;
+}
+.mainDashBoard .mainDashBoardContainer .balance .depoSpan .mBal {
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.mainLoader {
+  font-size: 1.5em;
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+}
+.connectInter{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2e8b57;
+}
+
+@media only screen and (max-width: 817px) {
+  .mainDashBoard .mainDashBoardContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .mainDashBoard .mainDashBoardContainer .balance {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .mainDashBoard .mainDashBoardContainer .welName h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .mainDashBoard .mainDashBoardContainer .welName .maxScreen{
+    font-size: 1.1rem;
+     font-weight: 400;
+     display: flex;
+   }
+   .mainDashBoard .mainDashBoardContainer .welName .smallScreen{
+     display: none;
+   }
+}
+@media only screen and (max-width: 380px) {
+  .mainDashBoard .mainDashBoardContainer .welName h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .mainDashBoard .mainDashBoardContainer .welName .maxScreen{
+    font-size: 1.1rem;
+     font-weight: 400;
+     display: flex;
+   }
+   .mainDashBoard .mainDashBoardContainer .welName .smallScreen{
+     display: none;
+   }
+}
+@media only screen and (max-width: 320px) {
+  .mainDashBoard .mainDashBoardContainer .welName h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .mainDashBoard .mainDashBoardContainer .welName .maxScreen{
+    font-size: 1.1rem;
+     font-weight: 400;
+     display: flex;
+   }
+   .mainDashBoard .mainDashBoardContainer .welName .smallScreen{
+     display: none;
+   }
+}
+@media only screen and (max-width: 280px) {
+  .mainDashBoard .mainDashBoardContainer .welName h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .mainDashBoard .mainDashBoardContainer .welName .maxScreen{
+     display: none;
+   }
+   .mainDashBoard .mainDashBoardContainer .welName .smallScreen{
+    font-size: 1.1rem;
+    font-weight: 400;
+    display: flex;
+   }
+}

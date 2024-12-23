@@ -1,0 +1,114 @@
+/* General styling for the InfoBox */
+.infoBox {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.infoBox h2 {
+  font-size: 24px;
+  color: var(--login-bg-h2-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Container for individual info boxes */
+.infoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* Individual info box */
+.theInfoBox {
+  display: flex;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+  width: calc(25% - 15px); /* For large screens, 4 boxes per row */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.theInfoBox:hover {
+  transform: scale(1.03);
+}
+
+/* Icon style */
+.iIcon {
+  font-size: 30px;
+  color: var(--login-bg-h2-color); /* Green color for the icons */
+  margin-right: 15px;
+}
+
+/* Details section within each info box */
+.infoDeatils {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.infoText {
+  font-size: 14px;
+  color: #666;
+}
+
+.num {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--login-bg-h2-color); /* Green for numbers */
+}
+
+/* Responsiveness for small screens */
+@media (max-width: 768px) {
+  .theInfoBox {
+    width: calc(50% - 15px); /* For small screens, 2 boxes per row */
+  }
+}
+
+@media (max-width: 586px) {
+  .infoBox {
+    height: 15rem;
+    overflow-y: auto;
+  }
+  .theInfoBox {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .iIcon {
+    margin-bottom: 10px;
+  }
+
+  .infoDeatils {
+    align-items: flex-start;
+  }
+
+  .num {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 391px) {
+  .infoBox {
+    padding: 8px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 381px) {
+  .theInfoBox {
+    padding: 5px;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

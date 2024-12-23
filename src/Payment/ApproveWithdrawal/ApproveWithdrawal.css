@@ -1,0 +1,67 @@
+.withdrawal-details {
+  background-color: var( --login-bg); /* Light green background */
+  border: 1px solid var(--login-bg-h2-color); /* Soft green border */
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 10rem auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  color: var(--login-bg-h2-color); /* Darker green for title */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.withdrawal-info p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: var(--dashboard-name); /* Greenish tone */
+}
+
+.approve-button {
+  width: 100%;
+  color: var(--login-btn-text);
+  background: var(--login-btn-bg);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+.approve-button:disabled {
+  background: var(--login-btn-br-hover);
+  color: var(--login-btn-text-hover);
+  cursor: not-allowed;
+}
+
+.approve-button:hover {
+  background: var(--login-btn-br-hover);
+  color: var(--login-btn-text-hover);
+}
+
+.error-message {
+  color: #e63946; /* Red for error messages */
+  text-align: center;
+}
+
+.loading-message {
+  text-align: center;
+  font-style: italic;
+  color: #555; /* Neutral loading color */
+}

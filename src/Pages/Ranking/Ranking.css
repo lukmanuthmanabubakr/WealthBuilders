@@ -1,0 +1,108 @@
+/* Container for the ranking page */
+.ranking-container {
+  padding: 40px 20px;
+  background-color: var( --login-bg); /* Light background */
+  text-align: center;
+}
+
+/* Title and subtitle */
+.ranking-heading {
+  font-size: 2.5rem;
+  color: var( --login-bg-h2-color); /* Green color */
+  margin-bottom: 20px;
+}
+
+.ranking-subheading {
+  font-size: 1.2rem;
+  color: var(--login-input-text); /* Muted gray for the subheading */
+  margin-bottom: 40px;
+}
+
+/* Grid layout for the ranking cards */
+.ranking-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards in a row */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .ranking-cards {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .ranking-cards {
+    grid-template-columns: 1fr; /* 1 card per row on small screens */
+  }
+}
+
+/* Style for each ranking card */
+.ranking-card {
+  background: linear-gradient(
+    to bottom right,
+    var( --blue-light), /* Light Green */
+    var(--blue-dark) /* Dodger Blue */
+  );
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.ranking-card:hover {
+  transform: translateY(-10px); /* Slight lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
+}
+
+/* Image styling */
+.ranking-card-img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+/* Title of the ranking card */
+.ranking-card-title {
+  font-size: 1.8rem;
+  color: #ffffff; /* White text for better contrast */
+  margin-bottom: 10px;
+}
+
+/* Description of the ranking card */
+.ranking-card-description {
+  font-size: 1rem;
+  color: #f0f0f0; /* Lighter text for readability */
+  margin-bottom: 20px;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 600px) {
+  .ranking-card-title {
+    font-size: 1.5rem;
+  }
+  .ranking-card-description {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 426px) {
+  .ranking-heading {
+    font-size: 1.5rem;
+    color: #2d6a4f;
+    margin-bottom: 20px;
+  }
+  .ranking-subheading {
+    font-size: 1rem;
+    color: #6c757d; /* Muted gray for the subheading */
+    margin-bottom: 40px;
+  }
+}

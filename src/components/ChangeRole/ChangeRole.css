@@ -1,0 +1,90 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--blue-light); /* Dark green tint */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: var(--login-bg); /* Light green */
+  border: 2px solid var(--login-input-bg-border); /* Primary green border */
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 128, 0, 0.3);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: var(--login-bg-h2-color); /* Darker green */
+}
+
+.close-icon {
+  cursor: pointer;
+  color: var(--login-bg-h2-color); /* Medium green */
+  transition: color 0.2s ease;
+}
+
+.close-icon:hover {
+  color: var(--login-btn-br-hover); /* Dark green when hovered */
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid var(--login-input-bg-border); /* Light green border */
+  background-color: var(--login-input-bg-border); /* Very light green */
+  color: var(--UserDontHaveAccount-p); /* Text in dark green */
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--UserDontHaveAccount); /* Focused border */
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.submit-btn, .cancel-btn {
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn {
+  background-color: var(--login-btn-bg); /* Green */
+  color: #fff;
+}
+
+.submit-btn:hover {
+  background-color: var(--login-btn-br-hover); /* Darker green */
+}
+
+.cancel-btn {
+  background-color: #d32f2f; /* Red */
+  color: #fff;
+}
+
+.cancel-btn:hover {
+  background-color: #b71c1c; /* Darker red */
+}

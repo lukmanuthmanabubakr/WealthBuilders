@@ -1,0 +1,110 @@
+/* Plans Container */
+.plans-container {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: var(--plan-bg);
+}
+
+.plans-heading {
+  font-size: 2.5rem;
+  color: var(--login-bg-h2-color);
+  margin-bottom: 40px;
+}
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 plans per row on large screens */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .plans-grid {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 plans per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .plans-grid {
+    grid-template-columns: 1fr; /* 1 plan per row on small screens */
+  }
+}
+
+/* Each Plan Card */
+.plan-card {
+  background-color: var(--plan-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-10px); /* Add a hover effect to elevate the card */
+}
+
+/* Image Styling */
+.plan-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Content of the Plan Card */
+.plan-content {
+  padding: 20px;
+}
+
+.plan-title {
+  font-size: 1.8rem;
+  color: var(--plan-title); /* Green title */
+  margin-bottom: 10px;
+}
+
+.plan-price {
+  font-size: 1.4rem;
+  color: var(--plan-price);
+  margin-bottom: 10px;
+}
+
+.plan-description {
+  font-size: 1rem;
+  color: var(--plan-desc); /* Muted grayish-green */
+  margin-bottom: 20px;
+}
+
+.plan-features {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.plan-features li {
+  font-size: 1rem;
+  color: #4a4a4a; /* Dark gray for features */
+  margin-bottom: 8px;
+}
+
+.plan-button {
+  background-color: var(--nav-btns-bg);
+  color: #fff;
+  padding: 10px 50px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  margin: 0 auto;
+}
+
+.plan-button:hover {
+  background: var(--nav-btns-bg-hover);
+}

@@ -51,7 +51,7 @@ const Footer = () => {
           data-aos-duration="1000"
         >
           <h2>Contact Us</h2>
-          <p>Email: info@xample.com</p>
+          <p>Email: wealtybuilders@gmail.com</p>
           <p>Phone: +1 (234) 567‑8910 </p>
           <p>Address: 123 Investment St, New York, NY 10001</p>
           <div className="social-icons">
@@ -83,7 +83,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; 2024 WealthBuilders Investment Platform. All rights reserved.</p>
+        <p>
+          &copy; 2024 WealthBuilders Investment Platform. All rights reserved.
+        </p>
       </div>
     </footer>
   );

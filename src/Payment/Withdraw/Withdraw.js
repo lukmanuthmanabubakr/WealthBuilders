@@ -83,7 +83,7 @@ const Withdraw = ({ token }) => {
         <p>1. Ensure your wallet address is correct.</p>
         <p>2. Enter the amount you want to withdraw.</p>
         <p>3. Submit the withdrawal request.</p>
-        <p>4. Wait for Greenwood approval and confirmation via email.</p>
+        <p>4. Wait for WealthBuilders approval and confirmation via email.</p>
         <p>5. Your withdrawal will be processed once approved.</p>
       </div>
 

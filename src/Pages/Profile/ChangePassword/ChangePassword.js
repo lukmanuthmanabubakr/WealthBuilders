@@ -54,9 +54,9 @@ const ChangePassword = () => {
     };
 
     const emailData = {
-      subject: "Password Changed - GreenWood",
+      subject: "Password Changed - WealthBuilders",
       send_to: user.email,
-      reply_to: "noreply@GreenWood",
+      reply_to: "noreply@WealthBuilders",
       template: "changePassword",
       url: "/forgot",
     };

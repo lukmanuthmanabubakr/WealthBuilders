@@ -1,54 +1,59 @@
-
 .p-loader-container {
-  position: fixed; /* Make the loader fixed to the viewport */
-  top: 0;
-  left: 0;
-  width: 100%; /* Cover the entire viewport */
-  height: 100vh; /* Full height of the viewport */
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var( --nav-bg); /* Use the dynamic loader background */
-  backdrop-filter: blur(10px); /* Apply the blur effect */
-  z-index: 1000;
+  height: 100vh;
+  background-color: var(--nav-bg);
 }
 
-/* Loader Wrapper */
 .p-GreenWood-loader {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  border-radius: 10px;
+  position: relative;
+  text-align: center;
 }
 
-/* Loader Text */
 .p-loader-text {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: var( --nav-logo);
-  margin-bottom: 20px;
-  animation: text-animation 1.5s ease-in-out infinite;
+  color: var(--nav-logo);
+  animation: slideText 3s infinite ease-in-out;
 }
 
-/* Loader Circle */
 .p-loader-circle {
   width: 50px;
   height: 50px;
-  border: 5px solid var(--section-3-bg);
-  border-top-color: transparent;
+  margin: 20px auto;
   border-radius: 50%;
-  animation: spin 1s linear infinite;
+  background-color: var(--blue-primary);
+  animation: pulseCircle 1.5s infinite;
 }
 
-/* Text Animation */
-@keyframes text-animation {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+/* Animations */
+@keyframes slideText {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
 }
 
-/* Spin Animation */
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+@keyframes pulseCircle {
+  0% {
+    transform: scale(1);
+    background-color: var(--blue-primary);
+  }
+  50% {
+    transform: scale(1.5);
+    background-color: var(--blue-dark);
+  }
+  100% {
+    transform: scale(1);
+    background-color: var(--blue-primary);
+  }
 }

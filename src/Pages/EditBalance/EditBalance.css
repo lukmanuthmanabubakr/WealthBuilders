@@ -80,8 +80,8 @@
   
   .edit-wallet-container button.back-button {
     font-size: 1rem;
-    color: var(--login-btn-text);
-    background-color: var(--green-primary);
+    color: var(--login-btn-bg);
+    background-color: var(--login-btn-text);
     border: none;
     padding: 10px 1.5rem;
     border-radius: 50px;
@@ -91,6 +91,6 @@
   }
   
   .edit-wallet-container button.back-button:hover {
-    background-color: var(--green-dark);
+    background-color: var(--section-2-bg);
   }
   

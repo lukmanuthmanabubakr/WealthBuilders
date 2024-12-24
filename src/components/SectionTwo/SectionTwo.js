@@ -11,7 +11,7 @@ const SectionTwo = () => {
         We are providing secure and easy crypto wallet service among 200+
         countries and regions around the world
       </p>
-      <div className="founderCon">
+      <div className="founderCon" data-aos="fade-up" data-aos-duration="2000">
         <div className="eachCon">
           <BsBuildingsFill className="sectionTwoIcon" />
           <p>Found In</p>

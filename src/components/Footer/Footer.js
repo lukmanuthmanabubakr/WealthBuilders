@@ -1,5 +1,6 @@
 import React from "react";
-import { FaWhatsapp, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaWhatsapp, FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
+
 import { FaSquareXTwitter } from "react-icons/fa6";
 import "./Footer.css";
 
@@ -51,12 +52,17 @@ const Footer = () => {
           data-aos-duration="1000"
         >
           <h2>Contact Us</h2>
-          <p>Email: invest@wealtybuilders.com</p>
-          <p>Phone: +1 (234) 567‑8910 </p>
+          <p>
+            Email:{" "}
+            <a className="email" href="mailto:invest@wealtybuilders.com">
+              invest@wealtybuilders.com
+            </a>
+          </p>
+          <p>Phone: +1 (414) 317‑2077 </p>
           <p>Address: 123 Investment St, New York, NY 10001</p>
           <div className="social-icons">
             <a
-              href="https://wa.me/14482232477"
+              href="https://wa.me/14143172077"
               aria-label="WhatsApp"
               target="_blank"
             >
@@ -66,11 +72,11 @@ const Footer = () => {
               <FaSquareXTwitter />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.facebook.com/share/15ovMt4SdE/?mibextid=wwXIfr"
               aria-label="LinkedIn"
               target="_blank"
             >
-              <FaLinkedin />
+              <FaFacebook />
             </a>
             <a
               href="https://instagram.com"

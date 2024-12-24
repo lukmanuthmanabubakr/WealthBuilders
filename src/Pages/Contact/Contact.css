@@ -92,6 +92,35 @@
   transform: translateY(-3px);
 }
 
+.notification-pop {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: var(--blue-dark);
+  color: var(--text-light);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: fadeInOut 5s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  10%, 90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+
 /* Responsive styles */
 @media (max-width: 768px) {
   .contactContainer {

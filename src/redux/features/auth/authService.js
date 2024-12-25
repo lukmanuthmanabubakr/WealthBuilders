@@ -10,8 +10,8 @@ export const validateEmail = (email) => {
   );
 };
 
-export const validatePhoneNumber = (phoneNumber) => {
-  return phoneNumber.match(
+export const validatePhoneNumber = (phone) => {
+  return phone.match(
     /^\+?[1-9]\d{1,14}$/
   );
 };

@@ -10,6 +10,13 @@ export const validateEmail = (email) => {
   );
 };
 
+export const validatePhoneNumber = (phoneNumber) => {
+  return phoneNumber.match(
+    /^\+?[1-9]\d{1,14}$/
+  );
+};
+
+
 //Lets Register User
 const register = async (userData) => {
   const response = await axios.post(API_URL + "register", userData);

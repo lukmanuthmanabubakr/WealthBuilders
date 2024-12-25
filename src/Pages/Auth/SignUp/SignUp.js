@@ -5,7 +5,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import PasswordInput from "../../../components/PasswordInput/PasswordInput";
 import { FaTimes, FaCheck } from "react-icons/fa";
 import { toast } from "react-toastify";
-import { validateEmail } from "../../../redux/features/auth/authService";
+import { validateEmail, validatePhoneNumber } from "../../../redux/features/auth/authService";
 import { useDispatch, useSelector } from "react-redux";
 import {
   register,
@@ -18,6 +18,7 @@ const initialState = {
   name: "",
   email: "",
   password: "",
+  phone: "",
   confirmPassword: "",
   referralCode: "",
 };
@@ -25,7 +26,7 @@ const initialState = {
 const SignUp = () => {
   const [formData, setFormData] = useState(initialState);
 
-  const { name, email, password, confirmPassword, referralCode } = formData;
+  const { name, email, password, confirmPassword, referralCode, phone } = formData;
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -83,7 +84,7 @@ const SignUp = () => {
   const registerUser = async (e) => {
     e.preventDefault();
 
-    if (!name || !email || !password) {
+    if (!name || !email || !password || !phone) {
       return toast.error("All fields are required");
     }
     if (password.length < 6) {
@@ -91,6 +92,9 @@ const SignUp = () => {
     }
     if (!validateEmail(email)) {
       return toast.error("Please enter a valid email");
+    }
+    if (!validatePhoneNumber(phone)) {
+      return toast.error("Please enter a valid Phone Number");
     }
     if (password !== confirmPassword) {
       return toast.error("Passwords do not match");
@@ -100,6 +104,7 @@ const SignUp = () => {
       name,
       email,
       password,
+      phone,
       referralCode,
     };
 
@@ -140,6 +145,15 @@ const SignUp = () => {
               required
               name="email"
               value={email}
+              onChange={handleInputChange}
+              className="emailInput"
+            />
+            <input
+              type="phone"
+              placeholder="(phone)+12345678901"
+              required
+              name="phone"
+              value={phone}
               onChange={handleInputChange}
               className="emailInput"
             />

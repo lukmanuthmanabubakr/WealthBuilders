@@ -31,6 +31,7 @@ const Home = () => {
         <Loader />
       ) : (
         <>
+        <HomePageAdvert />
           <div className="hero-section">
             <div className="hero-overlay"></div>
             <div className="hero-content">
@@ -59,7 +60,6 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <HomePageAdvert />
           <SectionTwo />
           <SectionThree />
           <Faq />

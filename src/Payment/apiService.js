@@ -87,6 +87,30 @@ export const confirmPayment = async (token, transactionId, status, notes) => {
   }
 };
 
+//RejectPayment 
+export const rejectPayment = async (token, transactionId, status, notes) => {
+  try {
+    const response = await axios.patch(
+      `${PAYMENT_URL}/payments/rejectPayment`,
+      {
+        transactionId,
+        status,
+        notes,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    throw new Error(
+      error.response?.data?.message || "Failed to confirm payment"
+    );
+  }
+};
+
 
 // Function to start an investment
 export const startInvestment = async (token, planName, amount) => {

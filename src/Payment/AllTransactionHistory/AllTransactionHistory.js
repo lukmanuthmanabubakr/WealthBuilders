@@ -3,7 +3,6 @@ import axios from "axios";
 import "./AllTransactionHistory.css";
 import useRedirectLoggedOutUser from "../../customHook/useRedirectLoggedOutUser";
 
-
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const All_TRANSACTIONS = `${BACKEND_URL}api/invest`;
 
@@ -109,6 +108,8 @@ const AllTransactionHistory = () => {
                       <span className="status-icon confirmed">✔️</span>
                     ) : item.status === "Pending" ? (
                       <span className="status-icon cancelled">⏳</span>
+                    ) : item.status === "Rejected" ? (
+                      <span className="status-icon cancelled">❌</span>
                     ) : (
                       item.status
                     )}

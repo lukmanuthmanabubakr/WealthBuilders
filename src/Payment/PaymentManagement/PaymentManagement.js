@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { confirmPayment, getPaymentStatus } from "../apiService";
+import { confirmPayment, getPaymentStatus, rejectPayment } from "../apiService";
 import { useParams } from "react-router-dom";
 import "./PaymentManagement.css"; // Import the CSS file
 import ButtonLoader from "../../components/ButtonLoader/ButtonLoader";
@@ -13,6 +13,8 @@ const PaymentManagement = ({ token }) => {
   const [notes, setNotes] = useState("");
   const [message, setMessage] = useState(""); // State for success or error message
   const [messageType, setMessageType] = useState(""); // State for message type (success or error)
+  const [isConfirmLoading, setIsConfirmLoading] = useState(false); // Separate loading state for confirm button
+  const [isRejectLoading, setIsRejectLoading] = useState(false); // Separate loading state for reject button
 
   const { isLoadings } = useSelector((state) => state.auth);
 
@@ -39,10 +41,8 @@ const PaymentManagement = ({ token }) => {
     fetchPaymentStatus();
   }, [token, transactionId]);
 
-  const [isButtonLoading, setIsButtonLoading] = useState(false);
-
   const handleConfirmPayment = async () => {
-    setIsButtonLoading(true); // Start loading
+    setIsConfirmLoading(true); // Start confirm loading
     setMessage(""); // Clear previous messages
     try {
       const status = "Confirmed";
@@ -55,12 +55,43 @@ const PaymentManagement = ({ token }) => {
 
       setMessageType("success");
       setMessage("Payment successfully confirmed!");
+      setPaymentDetails((prevDetails) => ({
+        ...prevDetails,
+        status: "Confirmed",
+      }));
     } catch (error) {
       console.error("Error confirming payment:", error);
       setMessageType("error");
-      setMessage("Payment has been confirmed already");
+      setMessage(error.message || "Failed to confirm payment.");
     } finally {
-      setIsButtonLoading(false); // Stop loading after completion
+      setIsConfirmLoading(false); // Stop loading after completion
+    }
+  };
+
+  const handleRejectPayment = async () => {
+    setIsRejectLoading(true); // Start reject loading
+    setMessage(""); // Clear previous messages
+    try {
+      const status = "Rejected"; // Set proper status for rejection
+      const response = await rejectPayment(
+        token,
+        transactionId,
+        status,
+        notes
+      );
+
+      setMessageType("success");
+      setMessage("Payment successfully rejected!");
+      setPaymentDetails((prevDetails) => ({
+        ...prevDetails,
+        status: "Rejected",
+      }));
+    } catch (error) {
+      console.error("Error rejecting payment:", error);
+      setMessageType("error");
+      setMessage(error.message || "Failed to reject payment.");
+    } finally {
+      setIsRejectLoading(false); // Stop loading after completion
     }
   };
 
@@ -93,9 +124,16 @@ const PaymentManagement = ({ token }) => {
           <ButtonLoader
             className="confirm-button"
             onClick={handleConfirmPayment}
-            isLoading={isButtonLoading}
+            isLoading={isConfirmLoading}
           >
             Confirm Payment
+          </ButtonLoader>
+          <ButtonLoader
+            className="reject-button"
+            onClick={handleRejectPayment}
+            isLoading={isRejectLoading}
+          >
+            Reject Payment
           </ButtonLoader>
           {message && (
             <p className={`message ${messageType}`}>

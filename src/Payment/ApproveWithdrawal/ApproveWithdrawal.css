@@ -49,6 +49,41 @@
   color: var(--login-btn-text-hover);
   cursor: not-allowed;
 }
+.reject-button {
+  width: 100%;
+  color: var(--login-btn-text);
+  background: rgb(221, 134, 134);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+.reject-button:disabled {
+  background: rgb(212, 112, 112);
+  color: var(--login-btn-text-hover);
+  cursor: not-allowed;
+}
+
+.reject-button:hover {
+  background: rgb(212, 112, 112);
+  color: var(--login-btn-text-hover);
+}
 
 .approve-button:hover {
   background: var(--login-btn-br-hover);

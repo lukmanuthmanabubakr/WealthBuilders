@@ -120,8 +120,10 @@ const AllTransactionHistory = () => {
                   <p className={`status ${item.status.toLowerCase()}`}>
                     {item.status === "Pending" ? (
                       <span className="status-icon cancelled">⏳</span>
-                    ) : (
+                    ) : item.status === "Approved" ? (
                       <span className="status-icon confirmed">✔️</span>
+                    ) : (
+                      <span className="status-icon rejected">❌</span>
                     )}
                     {item.status}
                   </p>

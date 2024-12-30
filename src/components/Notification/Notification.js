@@ -5,6 +5,7 @@ import { RESET, sendVerificationEmail } from "../../redux/features/auth/authSlic
 import { FiAlertCircle } from "react-icons/fi"; // Alert icon
 import "./Notification.css";
 import ButtonLoader from "../ButtonLoader/ButtonLoader";
+import { NavLink } from "react-router-dom";
 
 const Notification = () => {
   const dispatch = useDispatch();
@@ -23,10 +24,10 @@ const Notification = () => {
         <FiAlertCircle className="alert-icon" />
         <div className="notification-content">
           <p><b>Account Verification Needed</b></p>
-          <p>Check your email for a verification link to activate your account.</p>
-          <ButtonLoader isLoading={isLoading} className="resend-button" onClick={sendVerEmail}>
-            Resend Verification Link
-          </ButtonLoader>
+          <p>Check your email for a verification link to activate your account, If you did not receive email</p>
+          <NavLink isLoading={isLoading} className="resend-button" target="_blank" to="https://www.wealtybuilders.com/contact">
+            Contact Support
+          </NavLink>
         </div>
       </div>
     </div>

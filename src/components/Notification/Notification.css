@@ -54,6 +54,6 @@
   }
   
   .resend-button:hover {
-    background: #388e3c; /* Darker green on hover */
+    background: var(--login-btn-br-hover); /* Darker green on hover */
   }
   

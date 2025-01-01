@@ -177,7 +177,6 @@ const AllTransactionHistory = () => {
         <div className="modal-overlay" onClick={handleCloseModal}>
               <>
                 <p>
-                  <strong>Transaction ID:</strong> {selectedItem.transactionId}
                 </p>
                 <p>
                   <strong>Amount:</strong> $

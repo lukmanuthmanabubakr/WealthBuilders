@@ -63,7 +63,6 @@ const Withdraw = ({ token }) => {
   };
   // const formatBalance = (balance) => {
   //   if (balance >= 1_000_000) {
-  //   } else if (balance >= 1_000) {
   //   } else {
   //     return balance.toLocaleString();
 

@@ -184,7 +184,6 @@ const AllTransactionHistory = () => {
                   {selectedItem.amount.toLocaleString()}
                 </p>
                 <p>
-                  <strong>Status:</strong> {selectedItem.status}
                 </p>
                 <p>
                   <strong>Date:</strong>{" "}

@@ -180,7 +180,6 @@ const AllTransactionHistory = () => {
                 </p>
                 <p>
                   <strong>Amount:</strong> $
-                  {selectedItem.amount.toLocaleString()}
                 </p>
                 <p>
                 </p>

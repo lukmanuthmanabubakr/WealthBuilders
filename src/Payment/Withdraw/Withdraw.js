@@ -68,8 +68,6 @@ const Withdraw = ({ token }) => {
   //     return `${(balance / 1_000).toFixed(1).replace(/\.0$/, "")}k+`;
   //   } else {
   //     return balance.toLocaleString();
-  //   }
-  // };
 
 
   const formatBalance = (balance) => {

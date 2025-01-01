@@ -175,9 +175,6 @@ const AllTransactionHistory = () => {
       {/* Modal for displaying details */}
       {/* {selectedItem && (
         <div className="modal-overlay" onClick={handleCloseModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <h3>Transaction Details</h3>
-            {selectedItem.type === "Transaction" ? (
               <>
                 <p>
                   <strong>Transaction ID:</strong> {selectedItem.transactionId}

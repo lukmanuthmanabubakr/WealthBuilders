@@ -120,6 +120,12 @@ const UserStats = () => {
                         >
                           Edit Total-profit
                         </button>
+                        <button
+                          onClick={() => navigate(`/edit-user-balance/${_id}`)}
+                          style={{ color: "#2e8b57" }}
+                        >
+                          Edit balance
+                        </button>
                       </div>
                     )}
                   </div>

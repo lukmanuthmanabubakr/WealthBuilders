@@ -128,7 +128,7 @@ const EditBalance = () => {
 
   return (
     <div className="edit-wallet-container">
-      <h2>Edit Wallet Balance</h2>
+      <h2>Edit Total Profit</h2>
       <form onSubmit={handleUpdate}>
         <label>
           Amount:

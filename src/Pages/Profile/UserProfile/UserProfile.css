@@ -144,6 +144,30 @@
 .form-group input:focus {
   border: 1px solid var(--section-3-bg);
 }
+.form-group select {
+  width: 100%;
+  padding: 10px 20px;
+  color: var(--login-input-text);
+  background: var(--login-input-bg);
+  border-radius: 50px;
+  margin-bottom: 15px;
+  border-radius: 50px;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  transition: all ease 400ms;
+  -webkit-transition: all ease 400ms;
+  -moz-transition: all ease 400ms;
+  -ms-transition: all ease 400ms;
+  -o-transition: all ease 400ms;
+}
+
+.form-group select:focus {
+  border: 1px solid var(--section-3-bg);
+}
 
 .save-button {
   align-self: center;

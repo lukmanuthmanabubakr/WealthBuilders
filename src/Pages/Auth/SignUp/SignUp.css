@@ -7,7 +7,7 @@
   justify-content: center;
   background: var(--login-bg);
   gap: 10rem;
-  height: 100vh;
+  height: 120vh;
 }
 .registerAspect .loginSvg img {
   height: 500px;
@@ -86,6 +86,30 @@
   background: var(--login-input-bg);
   border-radius: 50px;
   margin-bottom: 5px;
+  border-radius: 50px;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  transition: all ease 400ms;
+  -webkit-transition: all ease 400ms;
+  -moz-transition: all ease 400ms;
+  -ms-transition: all ease 400ms;
+  -o-transition: all ease 400ms;
+}
+.registerAspect .loginContainer form input:focus {
+  border: 1px solid var(--login-input-bg-border);
+}
+.registerAspect .loginContainer form .countryInput {
+  width: 100%;
+  padding: 10px 20px;
+  color: var(--login-input-text);
+  background: var(--login-input-bg);
+  border-radius: 50px;
+  margin-bottom: 5px;
+  margin-top: 8px;
   border-radius: 50px;
   font-size: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);

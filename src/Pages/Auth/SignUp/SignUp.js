@@ -14,6 +14,10 @@ import {
 } from "../../../redux/features/auth/authSlice";
 import ButtonLoader from "../../../components/ButtonLoader/ButtonLoader";
 
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const COUNTRY = `${BACKEND_URL}api/countries`;
+
 const initialState = {
   name: "",
   email: "",
@@ -21,12 +25,13 @@ const initialState = {
   phone: "",
   confirmPassword: "",
   referralCode: "",
+  country: "",
 };
 
 const SignUp = () => {
   const [formData, setFormData] = useState(initialState);
-
-  const { name, email, password, confirmPassword, referralCode, phone } = formData;
+  const [countries, setCountries] = useState([]); // State to store countries
+  const { name, email, password, confirmPassword, referralCode, phone, country } = formData;
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -56,6 +61,21 @@ const SignUp = () => {
   };
 
   useEffect(() => {
+    // Fetch countries from the API
+    const fetchCountries = async () => {
+      try {
+        const response = await fetch(`${COUNTRY}`);
+        const data = await response.json();
+        setCountries(data); // Set the fetched countries
+      } catch (error) {
+        toast.error("Failed to fetch countries. Please try again later.");
+      }
+    };
+
+    fetchCountries();
+  }, []);
+
+  useEffect(() => {
     // Check Lower and Uppercase
     if (password.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/)) {
       setUCase(true);
@@ -81,10 +101,11 @@ const SignUp = () => {
       setPassLength(false);
     }
   }, [password]);
+
   const registerUser = async (e) => {
     e.preventDefault();
 
-    if (!name || !email || !password || !phone) {
+    if (!name || !email || !password || !phone || !country) {
       return toast.error("All fields are required");
     }
     if (password.length < 6) {
@@ -106,9 +127,9 @@ const SignUp = () => {
       password,
       phone,
       referralCode,
+      country, // Include the selected country
     };
 
-    // console.log(userData);
     await dispatch(register(userData));
     await dispatch(sendVerificationEmail());
   };
@@ -165,6 +186,20 @@ const SignUp = () => {
               onChange={handleInputChange}
               className="referInput"
             />
+            <select
+              name="country"
+              required
+              value={country}
+              onChange={handleInputChange}
+              className="countryInput"
+            >
+              <option value="">Select Country</option>
+              {countries.map((country) => (
+                <option key={country.code} value={country.name}>
+                  {country.name}
+                </option>
+              ))}
+            </select>
             <PasswordInput
               placeholder="Password"
               name="password"
@@ -183,30 +218,15 @@ const SignUp = () => {
               }}
             />
 
-            {/* Password strenght */}
             <div className="passwordStrength">
               <ul>
-                <li>
-                  {switchIcon(uCase)}
-                  &nbsp; Lowercase & Uppercase
-                </li>
-                <li>
-                  {switchIcon(num)}
-                  &nbsp; Number (0 - 9)
-                </li>
-                <li>
-                  {switchIcon(sChar)}
-                  &nbsp;Special Character (!@#$%^&*)
-                </li>
-                <li>
-                  {switchIcon(passLength)}
-                  &nbsp; At least 6 Character
-                </li>
+                <li>{switchIcon(uCase)} &nbsp; Lowercase & Uppercase</li>
+                <li>{switchIcon(num)} &nbsp; Number (0 - 9)</li>
+                <li>{switchIcon(sChar)} &nbsp; Special Character (!@#$%^&*)</li>
+                <li>{switchIcon(passLength)} &nbsp; At least 6 Character</li>
               </ul>
             </div>
-            {/* <button className="submit" type="submit">
-            Register
-          </button> */}
+
             <ButtonLoader
               className="submit"
               type="submit"

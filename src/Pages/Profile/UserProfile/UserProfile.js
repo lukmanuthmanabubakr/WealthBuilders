@@ -14,11 +14,13 @@ import ButtonLoader from "../../../components/ButtonLoader/ButtonLoader";
 
 const cloud_name = process.env.REACT_APP_CLOUD_NAME;
 const upload_preset = process.env.REACT_APP_UPLOAD_PRESET;
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const COUNTRY = `${BACKEND_URL}api/countries`; // The URL to get countries
 
 export const shortenText = (text, n) => {
   if (text.length > n) {
-    const shoretenedText = text.substring(0, n).concat("...");
-    return shoretenedText;
+    const shortenedText = text.substring(0, n).concat("...");
+    return shortenedText;
   }
   return text;
 };
@@ -29,21 +31,36 @@ const UserProfile = () => {
   const { isLoading, isLoggedIn, isSuccess, message, user } = useSelector(
     (state) => state.auth
   );
-  const initialState = {
+
+  const [profile, setProfile] = useState({
     name: user?.name || "",
     email: user?.email || "",
     phone: user?.phone || "",
+    country: user?.country || "",
     bio: user?.bio || "",
     photo: user?.photo || "",
     role: user?.role || "",
     isVerified: user?.isVerified ?? null, // Use null for initial loading state
-  };
-  
+  });
 
-  const [profile, setProfile] = useState(initialState);
+  const [countries, setCountries] = useState([]); // State to store countries
   const [profileImage, setProfileImage] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
   const fileInputRef = useRef(null);
+
+  useEffect(() => {
+    // Fetch countries from the API
+    const fetchCountries = async () => {
+      try {
+        const response = await fetch(COUNTRY);
+        const data = await response.json();
+        setCountries(data); // Set the fetched countries
+      } catch (error) {
+        toast.error("Failed to fetch countries. Please try again later.");
+      }
+    };
+    fetchCountries();
+  }, []);
 
   useEffect(() => {
     dispatch(getUser());
@@ -85,7 +102,6 @@ const UserProfile = () => {
           { method: "post", body: image }
         );
         const imgData = await response.json();
-        console.log(imgData);
         imageURL = imgData.url.toString();
       }
       // Save profile to MongoDB
@@ -93,11 +109,12 @@ const UserProfile = () => {
         name: profile.name,
         phone: profile.phone,
         bio: profile.bio,
+        country: profile.country, // Save the country selected by the user
         photo: profileImage ? imageURL : profile.photo,
       };
 
       dispatch(updateUser(userData));
-      toast.success("Image Uploaded");
+      toast.success("Profile Updated");
     } catch (error) {
       toast.error(error.message);
     }
@@ -109,6 +126,7 @@ const UserProfile = () => {
         ...profile,
         name: user.name,
         email: user.email,
+        country: user.country,
         phone: user.phone,
         photo: user.photo,
         bio: user.bio,
@@ -120,8 +138,8 @@ const UserProfile = () => {
 
   return (
     <>
-    {!isLoading && profile.isVerified === false && <Notification />}
-    <div className="userProfile-container">
+      {!isLoading && profile.isVerified === false && <Notification />}
+      <div className="userProfile-container">
         <h2 className="profile-header">User Profile</h2>
         {user && (
           <div className="profile-card">
@@ -166,6 +184,21 @@ const UserProfile = () => {
                 />
               </div>
               <div className="form-group">
+                <label>Country</label>
+                <select
+                  name="country"
+                  value={profile?.country}
+                  onChange={handleInputChange}
+                >
+                  <option value="">Select Country</option>
+                  {countries.map((country) => (
+                    <option key={country.code} value={country.name}>
+                      {country.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="form-group">
                 <label>Phone</label>
                 <input
                   type="text"
@@ -200,9 +233,7 @@ const UserProfile = () => {
 
 export const NameOfUser = () => {
   const user = useSelector(selectUser);
-
   const username = user?.name || "...";
-
   return <p className="nameOfUserProfle">{shortenText(username, 10)}</p>;
 };
 
@@ -213,5 +244,3 @@ export const UserImage = () => {
 };
 
 export default UserProfile;
-
-

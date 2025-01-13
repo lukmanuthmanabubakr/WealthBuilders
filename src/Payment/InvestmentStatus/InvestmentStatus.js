@@ -6,6 +6,8 @@ import {
   FaCheckCircle,
   FaTimesCircle,
 } from "react-icons/fa";
+import { IoIosWarning } from "react-icons/io";
+import { FcCancel } from "react-icons/fc";
 import axios from "axios";
 import useRedirectLoggedOutUser from "../../customHook/useRedirectLoggedOutUser";
 import "./InvestmentStatus.css";
@@ -47,7 +49,7 @@ const InvestmentStatus = () => {
       {loading ? (
         <p className="loading-message">Loading...</p>
       ) : investments.length === 0 ? (
-        <p className="no-investment-message">No investment at all</p>
+        <p className="no-investment-message">No investments found</p>
       ) : (
         <div className="investment-list">
           {investments.map((investment) => (
@@ -68,10 +70,17 @@ const InvestmentStatus = () => {
                   </p>
                 </div>
                 <div className="investment-row">
-                  {investment.status === "Active" ? (
+                  {investment.status === "Active" && (
                     <FaCheckCircle className="icon-status active" />
-                  ) : (
+                  )}
+                  {investment.status === "Ended" && (
                     <FaTimesCircle className="icon-status inactive" />
+                  )}
+                  {investment.status === "Pending" && (
+                    <IoIosWarning className="icon-status pending" />
+                  )}
+                  {investment.status === "Rejected" && (
+                    <FcCancel className="icon-status rejected" />
                   )}
                   <p
                     className={`investment-status-text ${investment.status.toLowerCase()}`}

@@ -1,15 +1,71 @@
 /* General Styles */
 .start-investment-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: var(--login-bg);
+  flex-direction: column;
+  padding: 20px;
+  background-color: var(--nav-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto; 
+  gap: 10px;
+  max-width: 600px;
 }
 
+.start-investment-container .instructions-section{
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.start-investment-container .instructions-section h3{
+  color: var(--login-bg-h2-color);
+  margin-bottom: 8px;
+}
+.start-investment-container .instructions-section p {
+  margin: 5px 0;
+  color: var(--login-input-text);
+}
+
+
+.start-investment-container .warning-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px;
+  background-color: #fff6f6; /* Soft warning background */
+  border: 1px solid #ffa1a1; /* Border indicating a warning */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 10px;
+}
+
+.start-investment-container .warning-section span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.start-investment-container .warning-section span h3 {
+  margin: 0;
+  color: #d9534f; /* Strong red color for emphasis */
+  font-size: 1.5rem;
+}
+
+.start-investment-container .warning-section span svg {
+  color: #d9534f; /* Matches the warning text color */
+  font-size: 1.8rem; /* Slightly larger for prominence */
+}
+
+.start-investment-container .warning-section p {
+  color: #a94442; /* Subtle red shade for text */
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+
 .start-investment-card {
-  width: 100%;
-  max-width: 500px;
   padding: 20px;
   background-color: var(--login-bg-card);
   border-radius: 10px;
@@ -17,9 +73,8 @@
 }
 
 .start-investment-title {
-  text-align: center;
   color: var(--login-bg-h2-color);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 /* Form Styles */

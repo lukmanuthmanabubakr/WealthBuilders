@@ -3,14 +3,13 @@ import { NavLink } from "react-router-dom";
 import { FaArrowDown } from "react-icons/fa";
 import "./PaymentLinks.css";
 import { AdminAuthorLink } from "../../components/protect/hiddenLink";
-import { FaWallet, FaCoins, FaArrowUp, FaUserFriends } from "react-icons/fa";
+import { FaWallet, FaCoins, FaArrowUp, FaUserFriends, FaHandHoldingUsd } from "react-icons/fa";
 import { SiInstatus } from "react-icons/si";
 import { PiPottedPlantFill } from "react-icons/pi";
 import { FaCrown } from "react-icons/fa6";
 import { IoReceipt } from "react-icons/io5";
 import { MdPending } from "react-icons/md";
 import { PiLockLaminatedOpenDuotone } from "react-icons/pi";
-
 
 
 const PaymentLinks = () => {
@@ -60,6 +59,14 @@ const PaymentLinks = () => {
             <PiLockLaminatedOpenDuotone />
           </p>
           <p className="depoPay">Pending Deposits</p>
+        </NavLink>
+      </AdminAuthorLink>
+      <AdminAuthorLink>
+        <NavLink to="/admin-pending-investment">
+          <p className="iconPay">
+            <FaHandHoldingUsd />
+          </p>
+          <p className="depoPay">Pending Investment</p>
         </NavLink>
       </AdminAuthorLink>
       <NavLink to="/referrals">

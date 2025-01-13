@@ -45,6 +45,7 @@ import EditBalance from "./Pages/EditBalance/EditBalance";
 import GetAllPendingDeposit from "./Payment/GetAllPendingDeposit/GetAllPendingDeposit";
 import Navbar from "./components/Navbar/Navbar";
 import UserBalEditted from "./Pages/UserBalEditted/UserBalEditted";
+import GetAllPendingInvestment from "./Payment/GetAllPendingInvestment/GetAllPendingInvestment";
 
 axios.defaults.withCredentials = true;
 
@@ -88,6 +89,7 @@ const App = () => {
           <Route path="/edit-balance/:id" element={<EditBalance />} />
           <Route path="/edit-user-balance/:id" element={<UserBalEditted />} />
           <Route path="/admin-pending-deposit" element={<GetAllPendingDeposit />} />
+          <Route path="/admin-pending-investment" element={<GetAllPendingInvestment />} />
           <Route
             path="/transaction/:transactionId"
             element={<PaymentManagement />}

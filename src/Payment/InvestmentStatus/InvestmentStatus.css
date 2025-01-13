@@ -94,6 +94,12 @@
 .icon-status.inactive {
   color: #d32f2f;
 }
+.icon-status.pending {
+  color: #f7e712;
+}
+.icon-status.rejected {
+  color: #d32f2f;
+}
 
 /* Investment Details */
 .investment-amount {

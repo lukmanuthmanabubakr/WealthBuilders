@@ -105,7 +105,7 @@ const App = () => {
           <Route path="/user-profile" element={<Profile />} />
         </Routes>
       </GoogleOAuthProvider>
-      {/* <Loader /> */}
+      {/* <L /> */}
     </div>
   );
 };

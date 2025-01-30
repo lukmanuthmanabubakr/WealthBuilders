@@ -70,7 +70,7 @@ const Verify = () => {
     await dispatch(verifyUser(verificationToken));
     await dispatch(RESET());
     setTimeout(() => {
-      navigate("/dashboard", { replace: true });
+      navigate("/upload-kyc", { replace: true });
       window.location.reload(); // Force a refresh of the next page
     }, 3000);
   };

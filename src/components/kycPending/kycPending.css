@@ -1,0 +1,101 @@
+/* Overlay to blur the background */
+.kyc-pending-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    backdrop-filter: blur(8px); /* Blurs the background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Popup Card */
+  .kyc-pending-card {
+    background: var(--login-bg-card);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 420px;
+    width: 100%;
+    animation: fadeIn 0.3s ease-in-out;
+    position: relative;
+  }
+  /* Icon Styling */
+.kyc-pending-icon {
+    font-size: 48px;
+    color: var(--blue-dark); /* Dodger Blue */
+    margin-bottom: 15px;
+  }
+  
+  /* Heading */
+  .kyc-pending-card h2 {
+    color: var(--login-bg-h2-color); /* Steel Blue */
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  /* Paragraph Text */
+  .kyc-pending-card p {
+    color: var(--text-dark);
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  /* Info Box */
+  .kyc-pending-info {
+    display: flex;
+    align-items: center;
+    background: var(--section-2-bg);
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 10px;
+    text-align: left;
+  }
+  
+  /* Info Icon */
+  .info-icon {
+    font-size: 20px;
+    color: var(--section-4-card-icon); /* Dodger Blue */
+    margin-right: 10px;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .kyc-pending-card {
+      padding: 20px;
+      max-width: 90%;
+    }
+  
+    .kyc-pending-icon {
+      font-size: 40px;
+    }
+  
+    .kyc-pending-card h2 {
+      font-size: 20px;
+    }
+  
+    .kyc-pending-card p {
+      font-size: 14px;
+    }
+  
+    .info-icon {
+      font-size: 18px;
+    }
+  }
+  

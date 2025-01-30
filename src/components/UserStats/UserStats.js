@@ -89,7 +89,18 @@ const UserStats = () => {
             <p>No user found...</p>
           ) : (
             filteredUsers.map((user, index) => {
-              const { _id, name, email, role, photo, country, totalMaturityAmount, phone, balance } = user;
+              const {
+                _id,
+                name,
+                email,
+                role,
+                photo,
+                country,
+                totalMaturityAmount,
+                phone,
+                balance,
+                kycStatus,
+              } = user;
               return (
                 <div className="userCard" key={_id}>
                   <div className="cardHeader">
@@ -137,6 +148,7 @@ const UserStats = () => {
                     <p>Balance: ${balance.toLocaleString()}</p>
                     <p>Total-profit: ${totalMaturityAmount.toLocaleString()}</p>
                     <p>Role: {role}</p>
+                    <p>Kyc Status: {kycStatus}</p>
                   </div>
                 </div>
               );

@@ -1,0 +1,172 @@
+.upload-kyc-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: var(--login-bg-card);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.upload-kyc-container h2 {
+  color: var(--blue-primary);
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.upload-kyc-container p {
+  color: var(--plans-text);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* KYC Document Selection Cards */
+.kyc-documents {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.kyc-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background: var(--workflow-card-bg);
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.kyc-card:hover {
+  transform: scale(1.05);
+}
+
+.kyc-card svg {
+  font-size: 30px;
+  color: var(--blue-primary);
+}
+
+.kyc-card p {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--plans-text);
+}
+
+/* Warning Section */
+.warning-section {
+  padding: 6px;
+  background-color: #fff6f6; /* Soft warning background */
+  border: 1px solid #ffa1a1; /* Border indicating a warning */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 10px;
+  margin: 3rem 0;
+}
+
+.warning-header {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  color: #ff4d4d;
+}
+
+.warning-header .warning-title {
+  margin: 0;
+  color: #d9534f; 
+  font-size: 1.5rem;
+}
+
+.warning-icon {
+  font-size: 30px;
+}
+
+
+.warning-content p {
+  color: #d32f2f;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.warning-content ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.warning-content ul li {
+  color: #b71c1c;
+  font-size: 13px;
+  margin-bottom: 5px;
+  list-style-type: none;
+}
+
+/* File Upload Form */
+.kyc-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.kyc-form label {
+  text-align: left;
+  font-weight: bold;
+  color: var(--plans-text);
+}
+
+.kyc-form input[type="file"] {
+  padding: 10px;
+  border: 1px solid var(--login-input-bg-border);
+  border-radius: 5px;
+  cursor: pointer;
+  background: var(--login-input-bg);
+  color: var(--login-input-text);
+}
+
+.kyc-form input[type="file"]:hover {
+  border-color: var(--blue-primary);
+}
+
+.kyc-form button {
+  background: var(--login-btn-bg);
+  color: var(--login-btn-text);
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.kyc-form button:hover {
+  background: var(--login-btn-br-hover);
+}
+
+.kyc-form button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Error Message */
+.kyc-message {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #b71c1c;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .upload-kyc-container {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .kyc-documents {
+    flex-direction: column;
+    align-items: center;
+  }
+}

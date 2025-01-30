@@ -41,6 +41,7 @@ const UserProfile = () => {
     photo: user?.photo || "",
     role: user?.role || "",
     isVerified: user?.isVerified ?? null, // Use null for initial loading state
+    kycStatus: user?.kycStatus ?? null, // Use null for initial loading state
   });
 
   const [countries, setCountries] = useState([]); // State to store countries
@@ -132,6 +133,7 @@ const UserProfile = () => {
         bio: user.bio,
         role: user.role,
         isVerified: user.isVerified,
+        kycStatus: user.kycStatus,
       });
     }
   }, [user]);
@@ -162,6 +164,7 @@ const UserProfile = () => {
               />
               <NameOfUser />
               <p className="profile-role">Role: {profile.role}</p>
+              <p className="profile-role">Kyc Status: {profile.kycStatus}</p>
             </div>
 
             <form onSubmit={saveProfile} className="profile-form">

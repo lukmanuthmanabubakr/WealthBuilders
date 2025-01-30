@@ -10,6 +10,8 @@ import { FaCrown } from "react-icons/fa6";
 import { IoReceipt } from "react-icons/io5";
 import { MdPending } from "react-icons/md";
 import { PiLockLaminatedOpenDuotone } from "react-icons/pi";
+import { RiPassPendingFill } from "react-icons/ri";
+
 
 
 const PaymentLinks = () => {
@@ -67,6 +69,14 @@ const PaymentLinks = () => {
             <FaHandHoldingUsd />
           </p>
           <p className="depoPay">Pending Investment</p>
+        </NavLink>
+      </AdminAuthorLink>
+      <AdminAuthorLink>
+        <NavLink to="/pending-kyc">
+          <p className="iconPay">
+            <RiPassPendingFill />
+          </p>
+          <p className="depoPay">Pending Kyc Verification</p>
         </NavLink>
       </AdminAuthorLink>
       <NavLink to="/referrals">

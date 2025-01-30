@@ -1,0 +1,56 @@
+.kyc-rejected-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    backdrop-filter: blur(8px); /* Blurs the background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .kyc-rejected-card {
+    background: var(--login-bg-card);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 420px;
+    width: 100%;
+    animation: fadeIn 0.3s ease-in-out;
+    position: relative;
+  }
+  
+  .kyc-rejected-icon {
+    font-size: 3rem;
+    color: var(--blue-dark); /* Dodger Blue */
+  }
+  
+  .kyc-rejected-card h2 {
+    color: var(--text-dark); /* Dark Gray */
+    margin: 1rem 0;
+  }
+  
+  .kyc-rejected-card p {
+    color: var(--dashboard-name); /* Steel Blue */
+  }
+  
+  .kyc-reupload-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background: var(--nav-btns-bg); /* Steel Blue */
+    color: var(--nav-btns-text); /* White */
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .kyc-reupload-link:hover {
+    background: var(--nav-btns-bg-hover); /* Cornflower Blue */
+  }
+  

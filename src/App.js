@@ -46,6 +46,8 @@ import GetAllPendingDeposit from "./Payment/GetAllPendingDeposit/GetAllPendingDe
 import Navbar from "./components/Navbar/Navbar";
 import UserBalEditted from "./Pages/UserBalEditted/UserBalEditted";
 import GetAllPendingInvestment from "./Payment/GetAllPendingInvestment/GetAllPendingInvestment";
+import UploadKyc from "./Pages/UploadKyc/UploadKyc";
+import AdminPendingKyc from "./Pages/AdminPendingKyc/AdminPendingKyc";
 
 axios.defaults.withCredentials = true;
 
@@ -77,6 +79,8 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<SignUp />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/upload-kyc" element={<UploadKyc />} />
+          <Route path="/pending-kyc" element={<AdminPendingKyc />} />
           <Route path="/referrals" element={<Referrals />} />
           <Route path="/transaction-History" element={<AllTransactionHistory />} />
           <Route path="/deposit-payment" element={<Deposit />} />

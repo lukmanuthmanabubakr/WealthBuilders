@@ -1,0 +1,40 @@
+.maintenance-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(240, 240, 240, 0.95); /* Light Gray with opacity */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 9999;
+  }
+  
+  .maintenance-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+  }
+  
+  .maintenance-content h1 {
+    color: var(--nav-logo); /* Navy */
+    font-size: 24px;
+  }
+  
+  .maintenance-content p {
+    color: var(--text-dark); /* Dark Gray */
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .countdown {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--blue-dark); /* Dodger Blue */
+    margin: 15px 0;
+  }
+  

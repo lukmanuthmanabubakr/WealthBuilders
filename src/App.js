@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.css";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import Home from "./Pages/Home/Home";
@@ -48,6 +48,7 @@ import UserBalEditted from "./Pages/UserBalEditted/UserBalEditted";
 import GetAllPendingInvestment from "./Payment/GetAllPendingInvestment/GetAllPendingInvestment";
 import UploadKyc from "./Pages/UploadKyc/UploadKyc";
 import AdminPendingKyc from "./Pages/AdminPendingKyc/AdminPendingKyc";
+import MaintenanceMode from "./components/MaintenanceMode";
 
 axios.defaults.withCredentials = true;
 
@@ -55,6 +56,7 @@ const App = () => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const user = useSelector(selectUser);
+  const [isMaintenance, setIsMaintenance] = useState(true); // Change to false when done
 
   useEffect(() => {
     dispatch(getLoginStatus());
@@ -62,6 +64,10 @@ const App = () => {
       dispatch(getUser());
     }
   }, [dispatch, isLoggedIn, user]);
+
+  if (isMaintenance) {
+    return <MaintenanceMode />;
+  }
   return (
     <div className="App">
       <Navbar />
@@ -82,18 +88,33 @@ const App = () => {
           <Route path="/upload-kyc" element={<UploadKyc />} />
           <Route path="/pending-kyc" element={<AdminPendingKyc />} />
           <Route path="/referrals" element={<Referrals />} />
-          <Route path="/transaction-History" element={<AllTransactionHistory />} />
+          <Route
+            path="/transaction-History"
+            element={<AllTransactionHistory />}
+          />
           <Route path="/deposit-payment" element={<Deposit />} />
           <Route path="/withdraw-wallet" element={<Withdraw />} />
           <Route path="/withdrawal/:id" element={<AdminWithdrawalDetail />} />
-          <Route path="/admin-pending-wallet" element={<PendingWithdrawals />} />
+          <Route
+            path="/admin-pending-wallet"
+            element={<PendingWithdrawals />}
+          />
           <Route path="/start-invest" element={<StartInvestment />} />
           <Route path="/invest-status" element={<InvestmentStatus />} />
-          <Route path="/investment/:investmentId" element={<InvestmentDetail />} />
+          <Route
+            path="/investment/:investmentId"
+            element={<InvestmentDetail />}
+          />
           <Route path="/edit-balance/:id" element={<EditBalance />} />
           <Route path="/edit-user-balance/:id" element={<UserBalEditted />} />
-          <Route path="/admin-pending-deposit" element={<GetAllPendingDeposit />} />
-          <Route path="/admin-pending-investment" element={<GetAllPendingInvestment />} />
+          <Route
+            path="/admin-pending-deposit"
+            element={<GetAllPendingDeposit />}
+          />
+          <Route
+            path="/admin-pending-investment"
+            element={<GetAllPendingInvestment />}
+          />
           <Route
             path="/transaction/:transactionId"
             element={<PaymentManagement />}
@@ -116,84 +137,9 @@ const App = () => {
 
 export default App;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React, { useEffect, useState } from "react";
+// import React, { useEffect } from "react";
 // import "./index.css";
-// import { Route, Routes } from "react-router-dom";
+// import { Route, Routes, useNavigate } from "react-router-dom";
 // import Home from "./Pages/Home/Home";
 // import Login from "./Pages/Auth/Login/Login";
 // import SignUp from "./Pages/Auth/SignUp/SignUp";
@@ -222,6 +168,7 @@ export default App;
 // import Dashboard from "./Payment/Dashboard/Dashboard";
 // import PaymentManagement from "./Payment/PaymentManagement/PaymentManagement";
 // import Deposit from "./Payment/Deposit/Deposit";
+// import { AdminAuthorLink } from "./components/protect/hiddenLink";
 // import StartInvestment from "./Payment/StartInvestment/StartInvestment";
 // import InvestmentStatus from "./Payment/InvestmentStatus/InvestmentStatus";
 // import InvestmentDetail from "./Payment/InvestmentDetail/InvestmentDetail";
@@ -231,79 +178,22 @@ export default App;
 // import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
 // import Withdraw from "./Payment/Withdraw/Withdraw";
 // import PendingWithdrawals from "./Payment/PendingWithdrawals/PendingWithdrawals";
+// import ApproveWithdrawal from "./Payment/ApproveWithdrawal/ApproveWithdrawal";
 // import AdminWithdrawalDetail from "./Payment/ApproveWithdrawal/ApproveWithdrawal";
 // import EditBalance from "./Pages/EditBalance/EditBalance";
 // import GetAllPendingDeposit from "./Payment/GetAllPendingDeposit/GetAllPendingDeposit";
 // import Navbar from "./components/Navbar/Navbar";
+// import UserBalEditted from "./Pages/UserBalEditted/UserBalEditted";
+// import GetAllPendingInvestment from "./Payment/GetAllPendingInvestment/GetAllPendingInvestment";
+// import UploadKyc from "./Pages/UploadKyc/UploadKyc";
+// import AdminPendingKyc from "./Pages/AdminPendingKyc/AdminPendingKyc";
 
 // axios.defaults.withCredentials = true;
-
-// const Countdown = ({ targetTime }) => {
-//   const [timeLeft, setTimeLeft] = useState(() => {
-//     const now = new Date();
-//     return targetTime - now;
-//   });
-
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       const now = new Date();
-//       setTimeLeft(targetTime - now);
-//     }, 1000);
-
-//     return () => clearInterval(interval);
-//   }, [targetTime]);
-
-//   if (timeLeft <= 0) {
-//     return null; // Countdown has ended
-//   }
-
-//   const formatTime = (milliseconds) => {
-//     const totalSeconds = Math.floor(milliseconds / 1000);
-//     const days = Math.floor(totalSeconds / (3600 * 24));
-//     const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
-//     const minutes = Math.floor((totalSeconds % 3600) / 60);
-//     const seconds = totalSeconds % 60;
-
-//     return `${days}d ${hours}h ${minutes}m ${seconds}s`;
-//   };
-
-//   return (
-//     <div
-//       style={{
-//         display: "flex",
-//         flexDirection: "column",
-//         justifyContent: "center",
-//         alignItems: "center",
-//         height: "100vh",
-//         backgroundColor: "#f0f0f0",
-//         textAlign: "center",
-//       }}
-//     >
-//       <h1 style={{ color: "#1e90ff" }}>Launching Soon</h1>
-//       <p>Time remaining: {formatTime(timeLeft)}</p>
-//     </div>
-//   );
-// };
 
 // const App = () => {
 //   const dispatch = useDispatch();
 //   const isLoggedIn = useSelector(selectIsLoggedIn);
 //   const user = useSelector(selectUser);
-
-//   const targetTime = new Date("December 30, 2024 00:00:00").getTime(); // Set target launch time
-
-//   const [isLaunched, setIsLaunched] = useState(new Date().getTime() >= targetTime);
-
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       if (new Date().getTime() >= targetTime) {
-//         setIsLaunched(true);
-//         clearInterval(interval);
-//       }
-//     }, 1000);
-
-//     return () => clearInterval(interval);
-//   }, [targetTime]);
 
 //   useEffect(() => {
 //     dispatch(getLoginStatus());
@@ -311,11 +201,6 @@ export default App;
 //       dispatch(getUser());
 //     }
 //   }, [dispatch, isLoggedIn, user]);
-
-//   if (!isLaunched) {
-//     return <Countdown targetTime={targetTime} />;
-//   }
-
 //   return (
 //     <div className="App">
 //       <Navbar />
@@ -333,6 +218,8 @@ export default App;
 //           <Route path="/login" element={<Login />} />
 //           <Route path="/register" element={<SignUp />} />
 //           <Route path="/dashboard" element={<Dashboard />} />
+//           <Route path="/upload-kyc" element={<UploadKyc />} />
+//           <Route path="/pending-kyc" element={<AdminPendingKyc />} />
 //           <Route path="/referrals" element={<Referrals />} />
 //           <Route path="/transaction-History" element={<AllTransactionHistory />} />
 //           <Route path="/deposit-payment" element={<Deposit />} />
@@ -343,7 +230,9 @@ export default App;
 //           <Route path="/invest-status" element={<InvestmentStatus />} />
 //           <Route path="/investment/:investmentId" element={<InvestmentDetail />} />
 //           <Route path="/edit-balance/:id" element={<EditBalance />} />
+//           <Route path="/edit-user-balance/:id" element={<UserBalEditted />} />
 //           <Route path="/admin-pending-deposit" element={<GetAllPendingDeposit />} />
+//           <Route path="/admin-pending-investment" element={<GetAllPendingInvestment />} />
 //           <Route
 //             path="/transaction/:transactionId"
 //             element={<PaymentManagement />}
@@ -355,9 +244,11 @@ export default App;
 //           />
 //           <Route path="/loginWithCode/:email" element={<LoginWithCode />} />
 //           <Route path="/verify/:verificationToken" element={<Verify />} />
+//           {/* <Route path="/user-profile" element={<UserProfile />} /> */}
 //           <Route path="/user-profile" element={<Profile />} />
 //         </Routes>
 //       </GoogleOAuthProvider>
+//       {/* <L /> */}
 //     </div>
 //   );
 // };

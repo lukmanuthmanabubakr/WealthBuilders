@@ -59,7 +59,7 @@ const Footer = () => {
             </a>
           </p>
           <p>Phone: +1 (414) 317‑2077 </p>
-          <p>5600 S Quebec St, Denver, CO, United States</p>
+          <p>Address: 5600 S Quebec St, Denver, CO, United States</p>
           <div className="social-icons">
             <a
               href="https://wa.me/14143172077"

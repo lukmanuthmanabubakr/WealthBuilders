@@ -59,7 +59,7 @@ const Footer = () => {
             </a>
           </p>
           <p>Phone: +1 (414) 317‑2077 </p>
-          <p>Address: 123 Investment St, New York, NY 10001</p>
+          <p>5600 S Quebec St, Denver, CO, United States</p>
           <div className="social-icons">
             <a
               href="https://wa.me/14143172077"
@@ -90,7 +90,7 @@ const Footer = () => {
       </div>
       <div className="footer-bottom">
         <p>
-          &copy; 2024 WealthBuilders Investment Platform. All rights reserved.
+          &copy; 2005 WealthBuilders Investment Platform. All rights reserved.
         </p>
       </div>
     </footer>

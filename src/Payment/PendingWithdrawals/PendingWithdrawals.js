@@ -22,7 +22,10 @@ const PendingWithdrawals = () => {
             Authorization: `Bearer ${token}`,
           },
         });
-        setWithdrawals(response.data.withdrawals);
+
+        console.log("Fetched Withdrawals:", response.data.withdrawals); // Debugging
+
+        setWithdrawals(response.data.withdrawals || []);
         toast.success("Pending withdrawals fetched successfully");
       } catch (error) {
         toast.error(
@@ -40,38 +43,45 @@ const PendingWithdrawals = () => {
     <div className="pending-withdrawals-container">
       <ToastContainer position="top-right" autoClose={5000} />
       <h2 className="header">Pending Withdrawals</h2>
+
       {isLoading ? (
         <p className="loading-text">Loading...</p>
       ) : (
         <div className="withdrawal-list">
           {withdrawals.length > 0 ? (
-            withdrawals.map((withdrawal) => (
-              <Link
-                to={`/withdrawal/${withdrawal._id}`} // Dynamic link to details page
-                key={withdrawal._id}
-                className="withdrawal-item-link" // Optional: Add class for styling
-              >
-                <div className="withdrawal-item">
-                  <p>
-                    <strong>User:</strong> {withdrawal.user.name} (
-                    {withdrawal.user.email})
-                  </p>
-                  <p>
-                    <strong>Amount:</strong> ${withdrawal.amount.toLocaleString()}
-                  </p>
-                  <p>
-                    <strong>Requested Date:</strong>{" "}
-                    {new Date(withdrawal.requestDate).toLocaleString()}
-                  </p>
-                  <p>
-                    <strong>Status:</strong> {withdrawal.status}
-                  </p>
-                  <p>
-                    <strong>Wallet Address:</strong> {withdrawal.walletAddress}
-                  </p>
-                </div>
-              </Link>
-            ))
+            withdrawals.map((withdrawal) => {
+              const user = withdrawal.user || {}; // Ensure user object exists
+
+              return (
+                <Link
+                  to={`/withdrawal/${withdrawal._id}`}
+                  key={withdrawal._id}
+                  className="withdrawal-item-link"
+                >
+                  <div className="withdrawal-item">
+                    <p>
+                      <strong>User:</strong>{" "}
+                      {user.name ? `${user.name} (${user.email || "N/A"})` : "N/A"}
+                    </p>
+                    <p>
+                      <strong>Amount:</strong> ${withdrawal.amount?.toLocaleString() || "N/A"}
+                    </p>
+                    <p>
+                      <strong>Requested Date:</strong>{" "}
+                      {withdrawal.requestDate
+                        ? new Date(withdrawal.requestDate).toLocaleString()
+                        : "N/A"}
+                    </p>
+                    <p>
+                      <strong>Status:</strong> {withdrawal.status || "N/A"}
+                    </p>
+                    <p>
+                      <strong>Wallet Address:</strong> {withdrawal.walletAddress || "N/A"}
+                    </p>
+                  </div>
+                </Link>
+              );
+            })
           ) : (
             <p className="no-data-text">No pending withdrawals found.</p>
           )}

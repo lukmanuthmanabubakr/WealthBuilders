@@ -38,16 +38,7 @@ const Deposit = ({ token }) => {
       setIsLoading(false);
     }
   };
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = process.env.REACT_APP_JIVOCHAT_URL;
-    script.async = true;
-    document.body.appendChild(script);
 
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
 
   return (
     <div className="container-deposit">

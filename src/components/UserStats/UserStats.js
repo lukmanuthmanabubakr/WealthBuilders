@@ -56,6 +56,31 @@ const UserStats = () => {
     });
   };
 
+  const impersonateUser = async (userId) => {
+    try {
+      const response = await fetch(
+        `${process.env.REACT_APP_BACKEND_URL}api/users/impersonate/${userId}`,
+        {
+          method: "POST",
+          credentials: "include", // Store JWT in cookies
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.message || "Something went wrong");
+      }
+
+      alert(`You are now impersonating ${data.message}`);
+      window.location.reload(); // Reload to apply new session
+    } catch (error) {
+      alert(error.message);
+    }
+  };
+
   useEffect(() => {
     dispatch(FILTER_USERS({ users, search }));
   }, [dispatch, users, search]);
@@ -149,6 +174,19 @@ const UserStats = () => {
                     <p>Total-profit: ${totalMaturityAmount.toLocaleString()}</p>
                     <p>Role: {role}</p>
                     <p>Kyc Status: {kycStatus}</p>
+                    <button
+                      onClick={() => impersonateUser(_id)}
+                      style={{
+                        backgroundColor: "#007bff",
+                        color: "white",
+                        padding: "5px",
+                        border: "none",
+                        cursor: "pointer",
+                        marginTop: "5px",
+                      }}
+                    >
+                      Impersonate
+                    </button>
                   </div>
                 </div>
               );

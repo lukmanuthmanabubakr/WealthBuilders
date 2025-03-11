@@ -9,8 +9,8 @@ import { IoIosWarning } from "react-icons/io";
 import Notification from "../../components/Notification/Notification";
 import "./UploadKyc.css";
 
-const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
-const ALLOWED_FORMATS = /jpeg|jpg|png|pdf/;
+const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
+const ALLOWED_FORMATS = /jpeg|jpg|png|gif|webp|bmp|heic|pdf/;
 
 const UploadKyc = () => {
   const [frontDoc, setFrontDoc] = useState(null);
@@ -25,7 +25,7 @@ const UploadKyc = () => {
   // File validation function
   const validateFile = (file) => {
     if (!file) return "Please select a file.";
-    if (file.size > MAX_FILE_SIZE) return "File size must be less than 5MB.";
+    if (file.size > MAX_FILE_SIZE) return "File size must be less than 10MB.";
     if (!ALLOWED_FORMATS.test(file.type.split("/")[1]))
       return "Invalid file format. Only JPEG, JPG, PNG, and PDF are allowed.";
     return null;
@@ -125,7 +125,7 @@ const UploadKyc = () => {
               File format must be <b>JPEG, JPG, PNG,</b>.
             </li>
             <li>
-              File size must be <b>less than 5MB</b>.
+              File size must be <b>less than 10MB</b>.
             </li>
             <li>
               Upload both <b>front and back</b> of your document.

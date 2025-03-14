@@ -74,10 +74,10 @@ const Home = () => {
             </div>
           </div>
           <SectionTwo />
+          <Forum />
           <SectionThree />
           <Teams />
           <Faq />
-          <Forum />
           <Footer />
         </>
       )}

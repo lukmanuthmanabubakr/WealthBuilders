@@ -10,6 +10,8 @@ import SectionTwo from "../../components/SectionTwo/SectionTwo";
 import SectionThree from "../../components/SectionThree/SectionThree";
 import Advert from "../../Payment/Advert/Advert";
 import HomePageAdvert from "../../components/HomePageAdvert/HomePageAdvert";
+import Teams from "../../components/Teams/Teams";
+import Forum from "../../components/Forum/Forum";
 
 const Home = () => {
   // State to handle loading animation
@@ -73,7 +75,9 @@ const Home = () => {
           </div>
           <SectionTwo />
           <SectionThree />
+          <Teams />
           <Faq />
+          <Forum />
           <Footer />
         </>
       )}

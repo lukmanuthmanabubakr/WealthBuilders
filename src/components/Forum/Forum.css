@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+:root {
+  --forum-bg: var(--section-4-bg);
+  --forum-header: var(--section-4-header);
+  --forum-card-bg: var(--section-4-card);
+  --forum-card-text: var(--text-dark);
+  --forum-card-shadow: rgba(0, 0, 0, 0.1);
+  --forum-btn-bg: var(--blue-primary);
+  --forum-btn-text: var(--text-light);
+}
+
+/* Forum section with a subtle background */
+.forum-section {
+  position: relative;
+  padding: 50px 20px;
+  text-align: center;
+  overflow: hidden;
+  
+  /* Background Image */
+  background: url("../../Assets/bggg.avif") center/cover no-repeat;
+  
+  /* Adding an overlay to soften the background */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Light overlay */
+    backdrop-filter: blur(8px); /* Soft Blur Effect */
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  /* Glassmorphism Effect */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+/* Dark overlay to make background softer */
+.forum-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Adjust transparency */
+  z-index: 1;
+}
+
+/* Text styling */
+.forum-header {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--nav-bg);
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Slider container */
+.forum-slider-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Actual slider */
+.forum-slider {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: slide 6s linear infinite;
+}
+
+/* Stop animation on hover */
+.forum-slider:hover {
+  animation-play-state: paused;
+}
+
+.forum-card {
+  background: var(--forum-card-bg);
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px var(--forum-card-shadow);
+  padding: 20px;
+  text-align: center;
+  min-width: 300px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.forum-card:hover {
+  transform: scale(1.05);
+}
+
+.forum-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.forum-description {
+  color: var(--forum-card-text);
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Faster Continuous Scrolling */
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

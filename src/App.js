@@ -49,6 +49,7 @@ import UserBalEditted from "./Pages/UserBalEditted/UserBalEditted";
 import GetAllPendingInvestment from "./Payment/GetAllPendingInvestment/GetAllPendingInvestment";
 import UploadKyc from "./Pages/UploadKyc/UploadKyc";
 import AdminPendingKyc from "./Pages/AdminPendingKyc/AdminPendingKyc";
+import License from "./Pages/License/License";
 
 axios.defaults.withCredentials = true;
 
@@ -72,6 +73,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/license" element={<License />} />
           <Route path="/plans" element={<Plans />} />
           <Route path="/Hierarchy" element={<Ranking />} />
           <Route path="/how-it-works" element={<WorkFlow />} />

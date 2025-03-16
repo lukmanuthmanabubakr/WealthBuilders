@@ -43,6 +43,9 @@ const Footer = () => {
             <li>
               <a href="/privacy-policy">Privacy Policy</a>
             </li>
+            <li>
+              <a href="/license">License</a>
+            </li>
           </ul>
         </div>
 
@@ -90,7 +93,7 @@ const Footer = () => {
       </div>
       <div className="footer-bottom">
         <p>
-          &copy; 2005 WealthBuilders Investment Platform. All rights reserved.
+          &copy; 2007 WealthBuilders Investment Platform. All rights reserved.
         </p>
       </div>
     </footer>

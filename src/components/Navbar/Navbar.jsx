@@ -60,6 +60,7 @@ const Navbar = () => {
         <NavLink to="/about">About</NavLink>
         <NavLink to="/contact">Contact</NavLink>
         <NavLink to="/how-it-works">Workflow</NavLink>
+        <NavLink to="/chart">Exchange Rate</NavLink>
         <NavLink to="/Hierarchy">Hierarchy</NavLink>
         <NavLink to="/user-profile" className="profileText">
           Profile
@@ -93,6 +94,7 @@ const Navbar = () => {
                 <NavLink to="/about">About</NavLink>
                 <NavLink to="/contact">Contact</NavLink>
                 <NavLink to="/how-it-works">Workflow</NavLink>
+                <NavLink to="/chart">Exchange Rate</NavLink>
                 <NavLink to="/hierarchy">Hierarchy</NavLink>
                 <ShowOnLogin>
                   <NavLink to="/user-profile">Profile</NavLink>

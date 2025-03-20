@@ -50,6 +50,7 @@ import GetAllPendingInvestment from "./Payment/GetAllPendingInvestment/GetAllPen
 import UploadKyc from "./Pages/UploadKyc/UploadKyc";
 import AdminPendingKyc from "./Pages/AdminPendingKyc/AdminPendingKyc";
 import License from "./Pages/License/License";
+import Chart from "./Pages/Chart/Chart";
 
 axios.defaults.withCredentials = true;
 
@@ -77,6 +78,7 @@ const App = () => {
           <Route path="/plans" element={<Plans />} />
           <Route path="/Hierarchy" element={<Ranking />} />
           <Route path="/how-it-works" element={<WorkFlow />} />
+          <Route path="/chart" element={<Chart />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />

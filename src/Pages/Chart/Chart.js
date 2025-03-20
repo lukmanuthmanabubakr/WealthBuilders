@@ -1,18 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../../components/Footer/Footer";
-import "./Chart.css"
+import "./Chart.css";
 
 const Chart = () => {
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     // Check if TradingView is already loaded
     if (typeof window !== "undefined" && !window.TradingView) {
       const script = document.createElement("script");
       script.src = "https://s3.tradingview.com/tv.js";
       script.async = true;
-      script.onload = () => initializeCharts(); // Initialize charts after script loads
+      script.onload = () => {
+        initializeCharts();
+        setLoading(false); // Set loading to false once the script is loaded and charts initialized
+      };
       document.body.appendChild(script);
     } else {
-      initializeCharts(); // If script is already loaded, initialize charts immediately
+      initializeCharts();
+      setLoading(false); // If script is already loaded, set loading to false
     }
   }, []);
 
@@ -59,6 +65,9 @@ const Chart = () => {
     <>
       <div className="chart-container">
         <h1 className="chart-heading">Forex & Crypto Exchange Charts</h1>
+
+        {/* Loading bar */}
+        {loading && <div className="loading-bar"></div>}
 
         <div>
           <h2>Forex Chart</h2>

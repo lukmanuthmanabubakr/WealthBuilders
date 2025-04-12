@@ -13,6 +13,7 @@ import {
   sendLoginCode,
 } from "../../../redux/features/auth/authSlice";
 import ButtonLoader from "../../../components/ButtonLoader/ButtonLoader";
+import SuspendedModal from "../../../components/SuspendedModal/SuspendedModal"; // modal component
 
 const initialState = {
   email: "",
@@ -21,19 +22,20 @@ const initialState = {
 
 const Login = () => {
   const [formData, setFormData] = useState(initialState);
+  const [showSuspendedModal, setShowSuspendedModal] = useState(false);
 
   const { email, password } = formData;
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const { isLoading, isLoggedIn, isSuccess, message, isError, twoFactor } =
     useSelector((state) => state.auth);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
   const loginUser = async (e) => {
     e.preventDefault();
@@ -51,7 +53,6 @@ const Login = () => {
       password,
     };
 
-    // console.log(userData);
     await dispatch(login(userData));
   };
 
@@ -60,13 +61,17 @@ const Login = () => {
       navigate("/dashboard");
     }
 
+    if (isError && message.includes("suspended")) {
+      setShowSuspendedModal(true);
+    }
+
     if (isError && twoFactor) {
       dispatch(sendLoginCode(email));
       navigate(`/loginWithCode/${email}`);
     }
 
     dispatch(RESET());
-  }, [isLoggedIn, isSuccess, dispatch, navigate, isError, twoFactor, email]);
+  }, [isLoggedIn, isSuccess, dispatch, navigate, isError, twoFactor, email, message]);
 
   const googleLogin = async (credentialResponse) => {
     console.log(credentialResponse);
@@ -74,6 +79,7 @@ const Login = () => {
       loginWithGoogle({ userToken: credentialResponse.credential })
     );
   };
+
   return (
     <>
       <div className="loginAspect">
@@ -82,19 +88,6 @@ const Login = () => {
         </div>
         <div className="loginContainer">
           <h2>Welcome Back!</h2>
-
-          {/* <div className="loginWithGoogle">
-            <button>Login With Google</button>
-          </div> */}
-          {/* <GoogleLogin
-            onSuccess={googleLogin}
-            onError={() => {
-              console.log("Login Failed");
-              toast.error("Login Failed");
-            }}
-          /> */}
-          <br />
-          {/* <p className="or">OR</p> */}
 
           <form onSubmit={loginUser}>
             <input
@@ -112,22 +105,11 @@ const Login = () => {
               value={password}
               onChange={handleInputChange}
             />
-            {/* <input
-            type="password"
-            placeholder="Password"
-            required
-            name="password"
-            value={password}
-            onChange={handleInputChange}
-          /> */}
-          
-            {/* <button className="submit" type="submit">
-              Login
-            </button> */}
             <ButtonLoader className="submit" type="submit" isLoading={isLoading}>
-            Login
-          </ButtonLoader>
+              Login
+            </ButtonLoader>
           </form>
+
           <NavLink to="/forgot" className="forgotPassword">
             Forgot Password
           </NavLink>
@@ -137,6 +119,11 @@ const Login = () => {
           </div>
         </div>
       </div>
+
+      {/* Suspended Modal */}
+      {showSuspendedModal && (
+        <SuspendedModal onClose={() => setShowSuspendedModal(false)} />
+      )}
     </>
   );
 };

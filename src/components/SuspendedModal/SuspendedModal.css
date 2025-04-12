@@ -1,0 +1,66 @@
+.suspended-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4); /* Soft dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.suspended-modal {
+  background: var(--login-bg-card); /* white */
+  color: var(--text-dark); /* #333 */
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.suspended-modal h2 {
+  font-size: 1.5rem;
+  color: var(--nav-logo); /* Navy */
+  margin-bottom: 1rem;
+}
+
+.suspended-modal p {
+  font-size: 1rem;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+}
+
+.suspended-modal-link-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: var(--blue-primary); /* Steel Blue */
+  color: var(--login-btn-text); /* white */
+  padding: 0.75rem;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.suspended-modal-link-button:hover {
+  background-color: var(--nav-btns-bg-hover); /* Cornflower Blue */
+  color: var(--login-btn-text-hover); /* white */
+}
+
+/* Optional animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
